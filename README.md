@@ -12,7 +12,8 @@ ng new Frontend --skip-git --style=css --routing=true --ssr=false
 
 cd Frontend
 
-## PASO 4: AÑADIR BOOSTRAP
+## PASO 4: INSTALAR BOOSTRAP
+
 ng add @ng-bootstrap/ng-bootstrap
 
 ## PASO 5: INSTALAR BOOTSTRAP-ICONS
