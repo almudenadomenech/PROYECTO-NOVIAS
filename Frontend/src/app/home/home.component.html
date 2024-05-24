@@ -1,1 +1,26 @@
-<p>home works!</p>
+<main>
+  @if(images){
+    <ngb-carousel>
+      <ng-template ngbSlide>
+				<div class="picsum-img-wrapper" >
+          <img [src]="images[0]" alt="Random slide" class="carousel-img" />
+      </div>
+      
+				
+			</ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper" >
+					<img [src]="images[1]" alt="Random slide" class="carousel-img" />
+				</div>
+				
+			</ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper" style="height:80vh; display: flex; align-items: center; justify-content:center">
+					<img [src]="images[2]" alt="Random slide" class="carousel-img" />
+				</div>
+				
+			</ng-template>
+
+    </ngb-carousel>
+  }
+</main>
