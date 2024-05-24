@@ -1,1 +1,61 @@
-<p>vestidos-list works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+       
+    
+        @for (vestido of vestidos; track vestido) {
+            <div class="col mt-5">
+    
+              <div class="card shadow-sm">
+              
+                <a [routerLink]="['/vestidos', vestido.id, 'detail']">
+                  @if(vestido.photoUrl){
+                 
+                  <img class="bd-placeholder-img card-img-top highlight-on-hover" [src]="'http://localhost:3000/uploads/' + vestido.photoUrl" alt="Imagen">
+    
+    
+                  } @else {
+                    <img class="bd-placeholder-img card-img-top" src="/assets/img/default.jpg">
+    
+                  }
+                  
+                </a>
+                <div class="card-body">
+                  <div class="card-body">
+                    <p>Vestido de novia</p>
+                    <p class="card-text"> <strong>Modelo {{vestido.model}}</strong>                     
+                    </p>
+                    <p class="card-text"> <strong>{{vestido.price}} €</strong>                     
+                    </p>
+                   
+                </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    
+                    <!-- <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div> -->
+                    
+                  </div>
+                </div>
+                  
+              </div>
+    
+    
+                 
+                  <div class="d-flex justify-content-between align-items-center">
+                    
+                    
+                  </div>
+                </div>
+          
+      }
+        
+       
+      </div>
+    </div>
+  </div>
+</div>
+
