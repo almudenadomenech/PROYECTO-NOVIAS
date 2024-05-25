@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param, ParseIntPipe } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Vestidos } from './vestidos.model';
@@ -12,4 +12,14 @@ export class VestidosController {
    findAll(){
     return this.vestidosRepository.find();
    }
+
+   @Get(':id')
+   findById(@Param('id', ParseIntPipe) id: number){
+    return this.vestidosRepository.findOne({
+        where: {
+            id: id
+        }
+    });
+    }
+   
 }
