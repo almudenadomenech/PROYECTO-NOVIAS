@@ -1,0 +1,28 @@
+.description{
+    margin-left: 50px;
+}
+h4{
+    margin-left: 230px;
+}
+
+.icon-price {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .price {
+    margin-right: 45px; /* Ajusta el espaciado según tus necesidades */
+  }
+  .reservar{
+    margin-top: 45px;
+    background-color: black;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    color: white;
+   border-radius: 15px;
+  }
+  h3{
+    color: black;
+  }
+  
