@@ -4,6 +4,9 @@ import { AppService } from './app.service';
 import { VestidosController } from './vestidos/vestidos.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Vestidos } from './vestidos/vestidos.model';
+import { BookingController } from './booking/booking.controller';
+import { Booking } from './booking/booking.model';
+import { UsersController } from './users/users.controller';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -13,13 +16,13 @@ import { Vestidos } from './vestidos/vestidos.model';
       username: 'root',
       password: 'admin',
       database: 'novias',
-      entities: [Vestidos],
+      entities: [Vestidos, Booking],
       synchronize: true, 
       logging: true
     }),
-    TypeOrmModule.forFeature([Vestidos])
+    TypeOrmModule.forFeature([Vestidos, Booking])
   ],
-  controllers: [AppController, VestidosController],
+  controllers: [AppController, VestidosController, BookingController, UsersController],
   providers: [AppService],
 })
 export class AppModule {}
