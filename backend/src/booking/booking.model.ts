@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Vestidos } from "src/vestidos/vestidos.model";
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 
@@ -20,10 +21,12 @@ export class Booking{
     phone: number;
 
     @Column({type: 'date'})
-    date: Date;
+    dateTime: Date;
 
-    @Column({type: 'time'})
-    time: TimeRanges;
+    @Column({nullable: true})
+    comment: string;
 
+    @ManyToOne(() => Vestidos, {eager: true})
+    vestido: Vestidos;
 }
 
