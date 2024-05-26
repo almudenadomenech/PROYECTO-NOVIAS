@@ -1,3 +1,5 @@
+import { Booking } from "./booking.model";
+
 export interface Vestido {
 
     id: number;
@@ -16,4 +18,6 @@ export interface Vestido {
     espalda: string;
     talle: string;
     tallas: string;
+
+    bookings: Booking;
 }
