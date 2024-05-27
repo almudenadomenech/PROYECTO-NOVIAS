@@ -1,3 +1,4 @@
+import { User } from "src/users/users.model";
 import { Vestidos } from "src/vestidos/vestidos.model";
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
@@ -28,5 +29,8 @@ export class Booking{
 
     @ManyToOne(() => Vestidos, {eager: true})
     vestido: Vestidos;
+
+    @ManyToOne(() => User, {eager: true})
+    user: User;
 }
 
