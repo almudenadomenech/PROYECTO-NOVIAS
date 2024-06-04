@@ -1,51 +1,87 @@
-<div class="card mt-5 px-4 negro-border" style="position: relative; margin-left: 120px; margin-right: 120px;">
-    <div class="row">
-        <div class="col">
-            <h3>Reserva tu cita</h3>
-<form>
-    <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
-      </div>
-      <div class="mb-3">
-        <label for="exampleFormControlInput2" class="form-label">Apellidos</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
-      </div>
-      <div class="mb-3">
-        <label for="exampleFormControlInput3" class="form-label">Dirección de correo</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-      </div>   
 
-      <!-- <div class="mb-3">
-        <label for="departureDate">Fecha</label>
-        <div class="input-group">
-            <input type="datetime-local"
-                class="form-control"
-                id="dateTime"
-                formControlName="dateTime"
-                ngbDatepicker
-                #d="ngbDatepicker">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary bi bi-calendar3" (click)="d.toggle()" type="button"></button>
-            </div>
+
+<div class="card mt-5 px-4 naranja-border" style="position:relative; margin-left: 120px; margin-right: 120px;">
+  <div class="row">
+    <div class="col-lg-8">
+
+      @if (showConfirmMessage) {
+        <ngb-alert type="warning" [dismissible]="false" class="mt-5 mb-4" style="min-height: 200px">
+                 
+          <br>
+          <br>Para las fechas {{booking?.dateTime}} 
+          <br>
+          <br>El código de tu reserva es {{booking?.id}}
+          
+          <div style="text-align: center;">
+            <i class="bi bi-check-lg" style="font-size: 4em;"></i>
         </div>
-    </div> -->
-    
-      <div class="mb-3">
-        <label for="exampleFormControlInput3" class="form-label">Fecha y Hora</label>
-        <input type="datetime-local" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-      </div>
+      
+          Para cualquier duda contacte con soporte&commat;casaRural.com
+        </ngb-alert>
+        <button class="w-100 btn btn-outline-naranaja btn-lg" style="margin-bottom: 20px;" routerLink="/vestidos">Volver al listado</button>
 
-      <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Comentarios</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-      </div>
-    
-      <button class="w-50 btn btn-outline-naranaja btn-lg mt-3  " type="submit">Finalizar</button>
-</form>
 
+      } @else {
+        <form class="mt-4"
+        [formGroup]="bookingForm"
+        (ngSubmit)="save()">
+
+        @if (vestido) {
+          <div class="container" >
+            <h4 class="mb-3" > Reserva de la casa: <strong></strong></h4>
+           
+          </div>
+        }
+       
+
+        
+
+        
+
+       
+
+        <label for="dateTime">Fecha</label>
+        <div class="form-floating mb-3">
+         
+         <input type="datetime-local" class="form-control"
+         id="dateTime" formControlName="dateTime"
+         placeholder="">
+         
+       </div>
+
+        <label for="comment">Comentarios</label>
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Leave a comment here" id="comment" formControlName="comment" style="min-height:150px;"></textarea>
+          
         </div>
-    </div>
+
+        <button class="w-50 btn btn1" type="submit">Enviar</button>
+      <button class="w-50 btn btn2" type="button" routerLink="/home">Cancelar</button>
+
+       </form> 
+
+        
+        <div _ngcontent-ng-c3189770292="" >
+          <div> 
+            @if (bookingForm) {
+              <div class="d-grid gap-2 mt-3">
+                     
+               </div>
+            }
+              </div> 
+          </div> 
+          
+  
+            <br>
+        }  
+             
+    
+      </div> 
+
+    
+  </div>
 </div>
 
+
+ 
 
