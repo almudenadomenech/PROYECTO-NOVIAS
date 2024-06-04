@@ -16,7 +16,7 @@ export class UserProfileComponent implements OnInit {
   userProfile = new FormGroup({
 
     id: new FormControl(),
-    name: new FormControl('', Validators.required),
+    firstName: new FormControl('', Validators.required),
     lastName: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
     phone: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{9}$')]),
@@ -48,7 +48,7 @@ export class UserProfileComponent implements OnInit {
 
         this.userProfile.reset({
           id: user.id,
-          name: user.name,
+          firstName: user.firstName,
           lastName: user.lastName,
           email: user.email,
           street: user.street,
@@ -68,7 +68,7 @@ export class UserProfileComponent implements OnInit {
 
     const user: User = {
       id: this.userProfile.get('id')?.value ?? 0,
-      name: this.userProfile.get('name')?.value ?? '',
+      firstName: this.userProfile.get('firstName')?.value ?? '',
       lastName: this.userProfile.get('lastName')?.value ?? '',
       email: this.userProfile.get('email')?.value ?? '',
       phone: this.userProfile.get('phone')?.value ?? '',
