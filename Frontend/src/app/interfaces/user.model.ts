@@ -1,15 +1,16 @@
 export interface User{
     id: number;
-    name: string;
-    lastName: string;
-    street: string;
-    postalCode: number;
-    city: string;
-    email: string;
-    phone: number;
-    photoUrl: string;
+    firstName?: string;
+    lastName?: string;
+    street?: string;
+    postalCode?: string;
+    city?: string;
+    email?: string;
+    phone?: string;
+    photoUrl?: string;
+    password?: string;
 
-    role: Role;
+    role?: Role;
 
 }
 export enum Role {

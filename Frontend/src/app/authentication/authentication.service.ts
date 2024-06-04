@@ -3,7 +3,6 @@ import { jwtDecode } from 'jwt-decode';
 import { BehaviorSubject } from 'rxjs';
 import { DecodedToken } from './token.dto';
 
-
 @Injectable({
   providedIn: 'root'
 })
