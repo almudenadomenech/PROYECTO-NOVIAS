@@ -1,12 +1,13 @@
 import { Booking } from "./booking.model";
+import { User } from "./user.model";
 
 export interface Vestido {
 
     id: number;
-    model: string;
+   model: string;
+   estilo: string;
     coleccion: string;
-    silueta: string;
-    detalle: string;
+   
     price: number;
     photoUrl: string;
     descripcion: string;
@@ -19,5 +20,6 @@ export interface Vestido {
     talle: string;
     tallas: string;
 
-    bookings: Booking;
+    booking?: Booking;
+    user?: User;
 }

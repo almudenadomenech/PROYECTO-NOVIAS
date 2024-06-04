@@ -5,17 +5,31 @@
 
       <div class="row row-cols-3 row-cols-sm-2 row-cols-md-2">
         <div class="col">
-          <div class="card shadow">
-             <img src="/assets/img/vestido-1.jpg" alt="">           
-          </div>
+            <div class="card shadow">
+              @if(vestidos && vestidos.photoUrl){
+                <a >
+                  
+                  <img class="bd-placeholder-img card-img-top 
+                  highlight-on-hover" [src]="baseUrl + vestidos.photoUrl" 
+                  alt="Imagen">
+                  
+                </a>
+              }
+                <a >
+                  @if(vestidos && !vestidos.photoUrl){
+                  <img class="bd-placeholder-img card-img-top" src="/assets/img/default.jpg" alt="Imagen por defecto">
+                  }
+                </a>
+           </div>
+  
+          
         </div>
         @if (vestidos) { 
         <div class="detalles">
-          
-          <h4>
-            <span >{{vestidos.model}}</span>
-          </h4>
-        
+          <div>
+            <p>{{vestidos.model}}</p>
+          </div>
+         
           <div class="description mt-5">
             <p>{{vestidos.descripcion}}</p>
             <br>
@@ -30,7 +44,12 @@
               <p style="margin-left: 15px; margin-bottom: 0;">El precio del vestido no incluye las personalizaciones o modificaciones. Los accesorios de la modelo se venden por separado.</p>
             </div>
             
-            <button routerLink="/booking" class="reservar">Reservar cita</button>
+            @if(!isLoogedIn){
+              <button routerLink="/register" class="reservar">Reservar cita</button>
+            }@else {
+              <button [routerLink]="['/booking', vestidos.id, 'form']" class="reservar">Reservar cita</button>
+            }
+            
 
             <div ngbAccordion style="margin-top: 45px; ">
               <div ngbAccordionItem >
@@ -93,7 +112,7 @@
 
                       <div style="display: flex; align-items: flex-start;">
                         <i class="bi bi-check-square-fill" style="margin-left: 5px;"></i>
-                        <p style="margin-left: 15px;">Pago con tarjeta o transferecia bancaria. *</p>
+                        <p style="margin-left: 15px;">Pago con tarjeta o transferecia bancaria.*</p>
                       </div>
 
                       <div style="display: flex; align-items: flex-start;">
