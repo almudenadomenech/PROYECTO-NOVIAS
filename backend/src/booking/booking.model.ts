@@ -9,26 +9,15 @@ export class Booking{
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({nullable: true})
-    name: string;
-
-    @Column({nullable: true})
-    lastName: string;
-
-    @Column({nullable: true})
-    email: string;
-
-    @Column({nullable: true})
-    phone: number;
 
     @Column({type: 'date'})
     dateTime: Date;
 
-    @Column({nullable: true})
-    comment: string;
+    @Column({nullable: false})
+    comment?: string;
 
     @ManyToOne(() => Vestidos, {eager: true})
-    vestido: Vestidos;
+    vestidos: Vestidos;
 
     @ManyToOne(() => User, {eager: true})
     user: User;
