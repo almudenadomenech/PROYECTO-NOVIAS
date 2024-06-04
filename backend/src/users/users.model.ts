@@ -8,28 +8,31 @@ export class User{
     id: number;
 
     @Column({nullable: true})
-    name: string;
+    firstName?: string;
 
     @Column({nullable: true})
-    lastName: string;
+    lastName?: string;
 
     @Column({nullable: true})
-    street: string;
+    street?: string;
 
     @Column({nullable: true})
-    postalCode: number;
+    postalCode?: number;
 
     @Column({nullable: true})
-    city: string;
+    city?: string;
 
     @Column({nullable: true})
     email: string;
 
-    @Column({nullable: true})
-    phone: number;
+    @Column()
+    password: string;
 
     @Column({nullable: true})
-    photoUrl: string;
+    phone?: number;
+
+    @Column({nullable: true})
+    photoUrl?: string;
 
     @Column({
         type: 'enum',
