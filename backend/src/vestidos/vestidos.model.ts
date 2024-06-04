@@ -1,3 +1,4 @@
+
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
@@ -11,13 +12,13 @@ export class Vestidos{
     model: string;
 
     @Column({nullable: false})
+    estilo: string;
+
+    @Column({nullable: false})
+    coleccion: string;
+
+    @Column({nullable: false})
     descripcion: string;
-
-    @Column({nullable: false})
-    silueta: string;
-
-    @Column({nullable: false})
-    detalle: string;
 
     @Column({nullable: false})
     price: number;
@@ -45,4 +46,7 @@ export class Vestidos{
 
     @Column({nullable: false})
     tallas: string;
+
+    
+
 }
