@@ -1,0 +1,30 @@
+.btn1-outline {
+    color: #ffffff;
+    background-color: rgb(76, 75, 75);
+  }
+  
+  .btn1-outline:hover {
+    color: #ffffff;
+    background-color: #0c0c0c;
+  }
+  .btn2-outline {
+    color: #ffffff;
+    background-color: rgb(76, 75, 75);
+  }
+  
+  .btn2-outline:hover {
+    color: #ffffff;
+    background-color: #0c0c0c;
+  }
+  .btn3-outline {
+    color: #ffffff;
+    background-color: rgb(76, 75, 75);
+  }
+  
+  .btn3-outline:hover {
+    color: #ffffff;
+    background-color: #0c0c0c;
+  }
+  .naranja-border {
+    border: 2px solid #0c0c0c;
+  }

@@ -1,1 +1,228 @@
+<div class="card mt-5 ml-4 px-4 naranja-border" style="position:relative; margin-left: 120px; margin-right: 120px">
+    <div class="row">
+        <div class="col">
 
+            @if(!isUpdate){
+            <h4 class="mb-3 mt-4" style="color: #111111">Introduce los detalles del vestido</h4>
+            } @else {
+            <h4 class="mb-3 mt-4" style="color: #0e0d0d">Actualizar</h4>
+            }
+
+
+            <form class="mt-4" [formGroup]="vestidosForm" (ngSubmit)="save()">
+
+                <input type="hidden" formControlName="id">
+
+                <div class="row">
+                    
+
+                    <div class="col">
+                        <label for="coleccion">Colección</label>
+                        <select class="form-select mt-2" id="coleccion" formControlName="coleccion"
+                            aria-label="coleccion" [compareWith]="compareObjects">
+
+                            <option>Selecciona Colección</option>
+                            <option value="Atelier">Atelier</option>
+                            <option value="InLove">InLove</option>
+                            <option value="Rose">Rose</option>
+                            <option value="Gelim">Gelim</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="col">
+                        <label for="corte">Corte</label>
+                        <select class="form-select mt-2" id="corte" formControlName="corte"
+                            aria-label="corte" [compareWith]="compareObjects">
+
+                            <option>Selecciona Corte</option>
+                            <option value="sirena">Sirena</option>
+                            <option value="recto">Recto</option>
+                            <option value="Corte A">Corte A</option>
+                            <option value="Tallas Grandes">Tallas Grandes</option>
+                            <option value="Princesa">Princesa</option>
+
+                        </select>
+
+                    </div>  
+                    <div class="col">
+                        <label for="escote">Escote</label>
+                        <select class="form-select mt-2" id="escote" formControlName="escote"
+                            aria-label="escote" [compareWith]="compareObjects">
+
+                            <option>Selecciona Escote</option>
+                            <option value="Halter">Halter</option>
+                            <option value="Cisne">Cisne</option>
+                            <option value="Corazon">Corazón</option>
+                            <option value="Redondo">Redondo</option>
+                            <option value="Caja">Caja</option>
+                            <option value="Drapeado">Drapeado</option>
+                            <option value="En Pico">En Pico</option>
+                            <option value="Palabra de Honor">Palabra de Honor</option>
+                            <option value="Transparente">Transparente</option>
+
+                        </select>
+
+                    </div>                  
+
+                    <div class="row mt-3">
+
+                       
+                        <div class="col">
+                            <label for="tipoCola">Tipo de Cola</label>
+                            <select class="form-select mt-2" id="tipoCola" formControlName="tipoCola"
+                                aria-label="tipoCola" [compareWith]="compareObjects">
+    
+                                <option>Selecciona Tipo de Cola</option>
+                                <option value="Corta">Corta</option>
+                                <option value="Capilla">Capilla</option>
+                                <option value="Catedral">Catedral</option>
+                                <option value="Real">Real</option>
+                                <option value="Semicatedral">Semicatedral</option>
+    
+                            </select>
+    
+                        </div>
+
+                        <div class="col">
+                            <label for="tejidos">Tejidos</label>
+                            <select class="form-select mt-2" id="tejidos" formControlName="tejidos"
+                                aria-label="tejidos" [compareWith]="compareObjects">
+    
+                                <option>Selecciona Tejidos</option>
+                                <option value="Tul">Tul</option>
+                                <option value="">Almeria</option>
+                                <option value="">Asturias</option>
+    
+                            </select>
+    
+                        </div>
+                        <div class="col">
+                            <label for="espalda"> Tipo de Espalda</label>
+                            <select class="form-select mt-2" id="espalda" formControlName="espalda"
+                                aria-label="espalda" [compareWith]="compareObjects">
+    
+                                <option>Selecciona Espalda</option>
+                                <option value="Halter">Halter</option>
+                                <option value="Abertura">Abertura</option>
+                                <option value="Barco">Barco</option>
+                                <option value="Caja">Caja</option>
+                                <option value="Corazón">Corazón</option>
+                                <option value="Cruzado">Cruzado</option>
+                                <option value="Asimétrico">Asimétrico</option>
+                                <option value="Bañera">Bañera</option>
+                                <option value="Cisne">Cisne</option>
+                                <option value="Corsé">Corsé</option>
+                                <option value="Cuadrado">Cuadrado</option>
+    
+                            </select>
+    
+                        </div>
+                        <div class="row mt-3">
+
+                           
+
+                            <div class="col">
+                                <label for="talle">Talle</label>
+                                <select class="form-select mt-2" id="talle" formControlName="talle"
+                                    aria-label="talle" [compareWith]="compareObjects">
+    
+                                    <option>Selecciona Talle</option>
+                                    <option value="alto">Alto</option>
+                                    <option value="bajo">Bajo</option>
+                                    <option value="cintura">Cintura</option>
+    
+                                </select>
+    
+                            </div>
+
+                            <div class="col">
+                                <label for="tallas">Tallas</label>
+                                <select class="form-select mt-2" id="tallas" formControlName="tallas"
+                                    aria-label="tallas" [compareWith]="compareObjects">
+    
+                                    <option>Selecciona Tallas</option>
+                                    <option value="32-64">32-64</option>
+                                    <
+    
+                                </select>
+    
+                            </div>
+                            <div class="col">
+                                <label for="price">Precio  (€)</label>
+                                <input type="number" min="500" max="10000"  class="form-control mt-2" id="price"
+                                    formControlName="price" placeholder="" aria-label="price">
+                            </div>
+                            </div>
+                                              
+                        <div class="form-floating mt-4">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="description"
+                                formControlName="description" style="height: 100px"></textarea>
+                            <label for="description" style="margin-left: 8px ">Descripción</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h4 class="mb-3 mt-4" style="color: #0f0f0f">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16" style="margin-right: 10px;">
+                            <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5M.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5"/>
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                          </svg>Datos de contacto</h4>
+                    <div class="col-6">
+                      <label for="phone" style="margin-top: 13px;">Teléfono</label>
+                      <input type="text"  class="form-control mt-2" id="phone"
+                          formControlName="phone" placeholder="" aria-label="phone">
+                          <label for="email" style="margin-top: 13px;">Email</label>
+                          <input type="text"  class="form-control mt-2" id="email"
+                              formControlName="email" placeholder="" aria-label="email">
+                  </div>
+                  <div class="col-6" style="margin-top: -40px;">
+                    @if (photoPreview) {
+                        <h4 style="color: #070707">Previsualización</h4>
+                        <img class="img-fluid" [src]="photoPreview" style="width: 300px;">
+                    }
+                </div>
+                  </div>
+
+                  <h4 class="mb-3 mt-4" style="color: #080808"><i class="bi bi-camera-fill" style="color:#0a0a0a; margin-right: 10px;"></i>Añadir Fotos</h4>
+                  <div class="col-md-6">
+
+                  <div class="input-group mt-4"> 
+                   <!-- <label class="input-group-text" for="photoUrl"> Subir Foto</label> -->
+                    <input type="file" class="form-control" id="photoUrl" (change)="onFileChange($event)"> 
+                    <input type="hidden" formControlName="photoUrl">
+                </div> 
+                  </div>
+                <br>
+                
+                <div class=" mt-2">
+                    <button class="btn btn1-outline w-25 py-2 mb-3" type="submit">Guardar</button> 
+                    <span style="margin-left: 10px;"></span>
+                   <button class="btn btn2-outline w-25 py-2 mb-3" type="submit" routerLink="/home">Cancelar</button>
+                   <span style="margin-left: 10px;"></span>
+                   <button class="btn btn3-outline w-25 py-2 mb-3" type="submit" routerLink="/vestidos">Volver</button>
+ 
+                 </div>
+ 
+           </form>
+           @if (showConfirmMessage) {
+             <ngb-alert type="warning" [dismissible]="false" class="mt-4 mb-3" style="min-height: 200px">
+               <p>Casa creada/actualizada correctamente</p>
+ 
+               <div style="text-align: center;">
+                 <i class="bi bi-check-lg" style="font-size: 4em;"></i>
+             </div>
+ 
+               Para cualquier duda contacte con soporte&commat;casaRural.com
+             </ngb-alert>
+ 
+ 
+           }
+       </div>
+ 
+   </div>
+ 
+ </div>
+         
