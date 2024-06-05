@@ -1,5 +1,6 @@
 
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Category } from "src/category/category.model";
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 
@@ -47,6 +48,7 @@ export class Vestidos{
     @Column({nullable: false})
     tallas: string;
 
-    
+    @ManyToOne(() => Category, category => category.vestidos)
+    category: Category;
 
 }
