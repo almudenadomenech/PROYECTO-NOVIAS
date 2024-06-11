@@ -2,12 +2,12 @@
     max-width: 330px;
     padding: 1rem;
   }
-  .btn-outline-naranaja {
+  .btn-outline-negro {
     color: #ffffff;
-    background-color: rgb(60, 56, 56);
+    background-color: #da269e;
   }
   
-  .btn-outline-naranaja:hover {
+  .btn-outline-negro:hover {
     color: #ffffff;
     background-color: #111111;
   }

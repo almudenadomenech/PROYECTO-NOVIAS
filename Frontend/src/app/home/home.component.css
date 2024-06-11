@@ -56,4 +56,21 @@ body {
   color: #434343;
 }
 
+.card {
+  height: 100%; /* Hace que todas las cards tengan la misma altura */
+}
+
+.card img {
+  height: 100%; /* Hace que todas las imágenes dentro de las cards tengan la misma altura */
+  object-fit: cover; /* Ajusta la imagen para que cubra todo el espacio disponible sin distorsionarse */
+}
+
+.container {
+  margin-top: 5rem;
+}
+
+.row-cols-lg-2 > .col {
+  flex: 0 0 50%; /* Hace que cada columna ocupe el 50% del ancho en dispositivos grandes */
+}
+
   

@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg bg-white navbar-custom">
-	<div class="container-fluid">
+<nav class="navbar navbar-expand-lg bg-black navbar-custom">
+	<div class="container-fluid" >
 		<!-- <a class="navbar-brand" href="#">
 			<img src="assets/img/letras_negro.svg" alt="Logo de Rural House">
 
@@ -17,15 +17,15 @@
 		</button>
 
 		<div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
-			<ul class="navbar-nav ms-auto">
+			<ul class="navbar-nav ms-auto ">
 				<button type="button" class="btn custom-btn" routerLink="/home">Home</button>
 				<button type="button" class="btn custom-btn" routerLink="/vestidos">Vestidos</button>
 				@if (isAdmin) {
 				<li class="nav-item" ngbDropdown>
 					<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown2" role="button"> Añadir y modificar </a>
 					<div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
-						<a ngbDropdownItem routerLink="/vestidos" (click)="$event.preventDefault()"style="background-color: #ffffff;">Vestidos</a>
-						<a ngbDropdownItem routerLink="/vestidos/create" (click)="$event.preventDefault()" style="background-color: #ffffff;">Añadir</a>
+						<a ngbDropdownItem routerLink="/vestidos" (click)="$event.preventDefault()"style="background-color: #000000;">Vestidos</a>
+						<a ngbDropdownItem routerLink="/vestidos/create" (click)="$event.preventDefault()" style="background-color: #000000;">Añadir</a>
 
 
 
@@ -37,7 +37,7 @@
 					<li class="nav-item" ngbDropdown display="dynamic" placement="bottom-end">
 						<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button"> Pedir cita </a>
 						<div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
-							<a ngbDropdownItem routerLink="/booking" (click)="$event.preventDefault()" style="background-color: #ffffff;">Listado de
+							<a ngbDropdownItem routerLink="/booking" (click)="$event.preventDefault()" style="background-color: #000000;">Listado de
 								Reservas</a>
 								
 							
@@ -55,7 +55,7 @@
 					<li class="nav-item" ngbDropdown display="dynamic" placement="bottom-end">
 						<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button"> Usuarios </a>
 						<div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
-							<a ngbDropdownItem routerLink="/user" (click)="$event.preventDefault()" style="background-color: #ffffff;">Lista de usuarios</a>
+							<a ngbDropdownItem routerLink="/user" (click)="$event.preventDefault()" style="background-color: #000000;">Lista de usuarios</a>
 	
 						</div>
 					</li>
@@ -64,14 +64,14 @@
 				}
 
 				@if (userEmail) {
-					<i class="bi bi-person mt-1" style="font-size: 25px; color:#f57d00;"></i>
+					<i class="bi bi-person mt-1" style="font-size: 25px; color:#f111ae;"></i>
 					<li class="nav-item" ngbDropdown display="dynamic" placement="bottom-end">
 						<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button">{{userEmail.split('@')[0]}}</a>
 						<div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
-							<a ngbDropdownItem routerLink="/account" (click)="$event.preventDefault()" style="background-color: #ffffff;">
+							<a ngbDropdownItem routerLink="/account" (click)="$event.preventDefault()" style="background-color: #000000;">
 								Editar Perfil
 							</a>
-							<a ngbDropdownItem (click)="logout();" style="cursor: pointer;background-color: #ffffff;">
+							<a ngbDropdownItem (click)="logout();" style="cursor: pointer;background-color: #000000;">
 								Cerrar Sesión
 							</a>
 								

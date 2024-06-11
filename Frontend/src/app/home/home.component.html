@@ -26,30 +26,62 @@
 
   <div class="container mt-5">
 
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-5">
-      <div class="col">
-        <div class="card shadow-sm">
-         
-            <img src="/assets/img/corte-princesa.jpg" alt="">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 g-3">
       
-         
+
+      <div class="col" (click)="categoryId(1)">
+        <div class="card shadow-sm img">
+          <img src="/assets/img/corte-sirena.jpg" alt="">
           <div class="card-body">
-            <p class="card-text"><strong>Vestidos de novia corte princesa:</strong>
-              <br> Donde los sueños se encuentran con la elegancia.</p>
-            
+            <p class="card-text"><strong>Vestidos de novia corte Sirena:</strong>
+              <br> una expresión de feminidad y sofisticación, que abraza las 
+              curvas con gracia y estilo, creando una silueta impactante y memorable.</p>
           </div>
           <div class="button">
             <button routerLink="/vestidos">Ver</button>
           </div>
         </div>
       </div>
+        
      
-      <div class="col">
+      <div class="col" (click)="categoryId(2)">
         <div class="card shadow-sm">
-          <img src="/assets/img/img-2.jpg" alt="">
+          <img src="/assets/img/corte-recto.jpg" alt="">
           <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-           
+            <p class="card-text"><strong>Vestidos de novia corte Recto:</strong>
+              <br> la perfecta armonía entre simplicidad y elegancia, 
+              diseñados para realzar la belleza natural de cada novia</p>
+          </div>
+          <div class="button">
+            <button routerLink="/vestidos">Ver</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" (click)="categoryId(3)">
+        <div class="card shadow-sm">
+          <img src="/assets/img/corte-A.jpg" alt="">
+          <div class="card-body">
+            <p class="card-text"><strong>Vestidos de novia Corte A:</strong>
+              <br> la perfecta combinación entre sutileza y esencia, que realza 
+              la belleza natural de la novia con su suave caída y encanto atemporal.</p>
+          </div>
+          <div class="button">
+            <button routerLink="/vestidos">Ver</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" (click)="categoryId(4)">
+        <div class="card shadow-sm">
+          <img src="/assets/img/corte-princesa.jpg" alt="">
+          <div class="card-body">
+            <p class="card-text"><strong>Vestidos de novia corte Princesa:</strong>
+              <br> Cada detalle está diseñado para hacer realidad los sueños más encantadores,
+               creando un cuento de hadas hecho realidad en tu día especial.</p>
+          </div>
+          <div class="button">
+            <button routerLink="/vestidos">Ver</button>
           </div>
         </div>
       </div>
