@@ -12,6 +12,7 @@ import { AccountFormComponent } from './account-form/account-form.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UserProfileComponent } from './profile/profile.component';
+import { CategoryComponent } from './category/category.component';
 
 export const routes: Routes = [
 
@@ -78,6 +79,10 @@ export const routes: Routes = [
     {
         path: 'register',
         component: RegisterComponent
+    },
+    {
+        path:'category/:id',
+        component: CategoryComponent
     }
     
 ];
