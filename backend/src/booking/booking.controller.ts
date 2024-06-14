@@ -17,7 +17,7 @@ export class BookingController {
     }
 
   
-      @Get('filter-by-id/:id')
+      @Get(':id')
     findById(@Param('id', ParseIntPipe) id: number){
         return this.bookingRepository.findOne({
             where: {
@@ -31,6 +31,17 @@ export class BookingController {
         return this.bookingRepository.find({
             where: {
                 user: {
+                    id: id
+                }
+            }
+        });
+    }
+
+    @Get('filter-by-category/:id')
+    findByCategoryId(@Param('id', ParseIntPipe) id: number){
+        return this.bookingRepository.find({
+            where: {
+                category: {
                     id: id
                 }
             }
