@@ -8,11 +8,6 @@ import { Vestido } from '../interfaces/vestido.model';
   providedIn: 'root'
 })
 export class CategoryService {
-  private apiUrl = 'http:/localhost:3000/category';
-
-  constructor(private http: HttpClient) { }
-
-  getVestidosByCategory(categoryId: number): Observable<Vestido[]> {
-    return this.http.get<Vestido[]>(`${this.apiUrl}/${categoryId}/vestidos`);
-  }
+  
+  
 }
