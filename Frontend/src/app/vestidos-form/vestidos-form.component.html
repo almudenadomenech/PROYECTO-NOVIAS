@@ -15,6 +15,11 @@
 
                 <div class="row">
                     
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder=""
+                          formControlName="model">
+                        <label for="floatingInput">Modelo</label>
+                      </div>
 
                     <div class="col">
                         <label for="coleccion">Colección</label>
@@ -30,9 +35,25 @@
                         </select>
 
                     </div>
+                   
+                  
+                    
+                    <div class="col">
+                        <label for="category">Categoría</label>
+                        <select class="form-select mt-2" id="category" formControlName="categoryId" aria-label="category">
+                            <option value="" disabled>Selecciona Categoría</option>
+                            <ng-container >
+                                @for (category of categories; track category)
+                                {
+                                    <option [value]="category.id">{{ category.name }}</option>
+                                }
+                            </ng-container>
+                        </select>
+                    </div>
+                    
 
                     <div class="col">
-                        <label for="corte">Corte</label>
+                        <label for="category">Corte</label>
                         <select class="form-select mt-2" id="corte" formControlName="corte"
                             aria-label="corte" [compareWith]="compareObjects">
 
@@ -61,6 +82,7 @@
                             <option value="En Pico">En Pico</option>
                             <option value="Palabra de Honor">Palabra de Honor</option>
                             <option value="Transparente">Transparente</option>
+                            <option value="Envolvente">Envolvente</option>
 
                         </select>
 
@@ -92,8 +114,8 @@
     
                                 <option>Selecciona Tejidos</option>
                                 <option value="Tul">Tul</option>
-                                <option value="">Almeria</option>
-                                <option value="">Asturias</option>
+                                <option value="Crepe">Crepe</option>
+                                <option value=""></option>
     
                             </select>
     
@@ -115,7 +137,9 @@
                                 <option value="Cisne">Cisne</option>
                                 <option value="Corsé">Corsé</option>
                                 <option value="Cuadrado">Cuadrado</option>
-    
+                                <option value="En pico">En pico</option>
+                                <option value="Palabra de Honor">Palabra de Honor</option>
+                                <option value="Envolvente">Envolvente</option>
                             </select>
     
                         </div>
@@ -144,6 +168,8 @@
     
                                     <option>Selecciona Tallas</option>
                                     <option value="32-64">32-64</option>
+                                    <option value="32-52">32-52</option>
+                                    <option value="32-60">32-60</option>
                                     <
     
                                 </select>

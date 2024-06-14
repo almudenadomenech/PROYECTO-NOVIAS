@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-12">
 
-      @if (showConfirmMessage) {
+ <!--      @if (showConfirmMessage) {
         <ngb-alert type="warning" [dismissible]="false" class="mt-4 mb-3" style="min-height: 200px">
           <p>El vestido se ha eliminado correctamente</p>
           
@@ -15,8 +15,17 @@
         <button class="w-100 btn btn-outline-naranaja btn-lg" style="margin-bottom: 20px;" routerLink="/home">Volver</button>
       
       
-      } 
-      
+      }  -->
+      <h3 style="margin-top:200px;">Filtros:</h3>
+
+      <h4>Categorías</h4>
+
+      @for (category of categories; track category.id) {
+        <a class="badge text-bg-success me-2 text-decoration-none"
+        [routerLink]="['/categories', category.id, 'detail']">
+          {{category.name}}
+        </a>
+      }
       <div class="album py-5 bg-white">
         <div class="container">
           <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3"> 
@@ -28,17 +37,23 @@
     
               <div class="card ">
               
-                <a [routerLink]="['/vestidos', vestido.id, 'detail']">
+                 <a [routerLink]="['/vestidos', vestido.id, 'detail']">
                   <div class="card-img-container img-fluid">
                     <img class="card-img-top" 
                          [src]="vestido.photoUrl ? (baseUrl + vestido.photoUrl) : '/assets/img/default.jpg'" 
                          alt="Imagen">
                   </div>                
                 </a>
-
+      <!--       @if (vestido.category) {
+                <a (click)="loadVestidos()">
+                  <div class="card-img-container img-fluid">
+                    <img class="card-img-top" [src]="vestido.photoUrl ? (baseUrl + vestido.photoUrl) : '/assets/img/default.jpg'" alt="Imagen">
+                  </div>
+                </a>
+              } -->
                 <div class="card-body">
                   <div class="card-text">
-                    <p>Vestido de novia</p>
+                    <p>{{vestido.description}}</p>
                                         
                     
                     <p class="card-text"> <strong>{{vestido.price}} €</strong>                     
