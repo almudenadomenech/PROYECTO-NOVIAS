@@ -16,6 +16,7 @@ import { v4 as uuidv4} from 'uuid';
 import { extname } from 'path';
 import { JwtValidator } from './users/jwt.validator';
 import { CategoryController } from './category/category.controller';
+import { Category } from './category/category.model';
 @Module({
   imports: [
     PassportModule,
@@ -40,11 +41,11 @@ import { CategoryController } from './category/category.controller';
       username: 'root',
       password: 'admin',
       database: 'novias',
-      entities: [Vestidos, Booking, User],
+      entities: [Vestidos, Booking, User, Category],
       synchronize: true, 
       logging: true
     }),
-    TypeOrmModule.forFeature([Vestidos, Booking, User])
+    TypeOrmModule.forFeature([Vestidos, Booking, User, Category])
   ],
   controllers: [AppController, VestidosController, BookingController, UsersController, CategoryController],
   providers: [AppService, JwtValidator],
