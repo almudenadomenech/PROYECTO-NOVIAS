@@ -22,19 +22,16 @@ export class VestidosController {
         }
     });
 }
-    
-
-    @Get('filter-by-descripcion')
-    findByDescripcion(@Param('id', ParseIntPipe) id: string){
-        return this.vestidosRepository.findOne({
-            where: {
-                descripcion: id
+@Get('filter-by-category-id/:id')
+findByCategoryId(@Param('id', ParseIntPipe) id:number) {
+    return this.vestidosRepository.find({
+        where: {
+            categories: {
+                id: id
             }
-        });
-    }
-
-    
-
+        }
+    });
+}
    
     @Get('filter-by-price')
     findByPrice(@Param('id', ParseIntPipe) id: number){
@@ -54,11 +51,28 @@ export class VestidosController {
         });
     }
 
-    @Get('filter-by-corte')
+     @Get('filter-by-corte')
     findByCorte(@Param('id', ParseIntPipe) id: string) {
         return this.vestidosRepository.find({
             where: {
                 corte: id
+            }
+        });
+    } 
+
+    @Get('filter-by-model')
+    findByModel(@Param('id', ParseIntPipe) id: string) {
+        return this.vestidosRepository.find({
+            where: {
+                model: id
+            }
+        });
+    } 
+    @Get('filter-by-description')
+    findByDescription(@Param('id', ParseIntPipe) id: string) {
+        return this.vestidosRepository.find({
+            where: {
+                description: id
             }
         });
     }
@@ -120,7 +134,8 @@ export class VestidosController {
     @Post()
     @UseInterceptors(FileInterceptor('file'))
     async create(@UploadedFile() file: Express.Multer.File,
-    @Body() vestidos: Vestidos){
+    @Body() vestidos: Vestidos,
+){
 
         if (file) {
             vestidos.photoUrl = file.filename;
