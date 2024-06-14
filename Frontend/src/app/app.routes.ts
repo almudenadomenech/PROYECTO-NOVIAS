@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UserProfileComponent } from './profile/profile.component';
 import { CategoryComponent } from './category/category.component';
+import { CategoryDetailComponent } from './category-detail/category-detail.component';
 
 export const routes: Routes = [
 
@@ -52,6 +53,10 @@ export const routes: Routes = [
         path: 'booking/:id/form',
         component: BookingFormComponent
     },
+    {
+        path: 'categories/:id/detail',
+        component: CategoryDetailComponent
+      },
     {
         path: 'user',
         component: UserListComponent
