@@ -1,4 +1,4 @@
-import { Controller, Get, NotFoundException, Param, ParseIntPipe } from '@nestjs/common';
+import { Controller, Get, Param, ParseIntPipe } from '@nestjs/common';
 import { Category } from './category.model';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
@@ -16,20 +16,13 @@ findAll() {
     return this.categoryRepository.find();
 }
 
-@Get('filter-by-id/:id')
-findById(@Param('id', ParseIntPipe) id: number ) {
+@Get(':id')
+findById( @Param('id', ParseIntPipe) id: number ) {
     return this.categoryRepository.findOne({
         where: {
             id: id
         }
     });
 }
-@Get('filter-by-name')
-findByName(@Param('id', ParseIntPipe) id: string) {
-    return this.categoryRepository.find({
-        where: {
-            name: id
-        }
-    });
-} 
+
 }

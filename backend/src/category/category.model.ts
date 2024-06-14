@@ -7,12 +7,12 @@ export class Category{
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column()
+    @Column({nullable: false})
     name: string;
 
     /* @ManyToOne(() => Vestidos, {eager: true})
     vestidos: Vestidos; */
 
-     @OneToMany(() => Vestidos, (vestidos) => vestidos.category)
-  vestidos: Vestidos[]; 
+    /*  @OneToMany(() => Vestidos, (vestidos) => vestidos.category)
+  vestidos: Vestidos[];  */
 }
