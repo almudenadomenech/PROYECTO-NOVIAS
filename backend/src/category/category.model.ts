@@ -10,6 +10,9 @@ export class Category{
     @Column({nullable: false})
     name: string;
 
+    @Column({nullable: false})
+    descripcion: string;
+
     /* @ManyToOne(() => Vestidos, {eager: true})
     vestidos: Vestidos; */
 

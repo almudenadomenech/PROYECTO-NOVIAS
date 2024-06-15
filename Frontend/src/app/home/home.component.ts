@@ -38,10 +38,5 @@ export class HomeComponent implements OnInit {
     .subscribe(categories => this.categories = categories);
   }  */
 
-    categoryId(id: number): void {
-      this.httpClient.get<Vestido[]>(`http://localhost:3000/vestidos/filter-by-category-id/${id}`)
-        .subscribe(vestidos => {
-          this.vestidos = vestidos;
-        });
-}
+  
 }

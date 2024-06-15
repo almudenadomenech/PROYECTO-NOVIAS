@@ -23,7 +23,7 @@
   background-size: cover;
   padding-top:100px;
   padding-bottom: 100px;
-  font-family: "Montserrat", sans-serif;
+  font-family:  "Playwrite FR Trad", cursive;
 }
 
 .bg-welcome h1 { 
@@ -71,6 +71,10 @@ body {
 
 .row-cols-lg-2 > .col {
   flex: 0 0 50%; /* Hace que cada columna ocupe el 50% del ancho en dispositivos grandes */
+}
+
+.card{
+  border: 3px solid #e9c2d9; /* Cambia #ff0000 por el color que desees */
 }
 
   
