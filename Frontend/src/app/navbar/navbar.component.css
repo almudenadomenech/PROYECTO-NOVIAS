@@ -1,5 +1,5 @@
 .body{
-    font-family: "Montserrat", sans-serif;
+    font-family:  "Playwrite FR Trad", cursive;
 }
 
 
@@ -23,6 +23,15 @@
 }
 
 
+.navbar-brand img {
+    width: 80px;
+    height: auto;
+    margin-left: 15px;
+    margin-top: 5px;
+  }
+h3{
+    color:#eb7abb
+}
 
 
 

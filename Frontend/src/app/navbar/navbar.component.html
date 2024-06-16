@@ -1,10 +1,10 @@
 <nav class="navbar navbar-expand-lg bg-black navbar-custom">
 	<div class="container-fluid" >
-		<!-- <a class="navbar-brand" href="#">
-			<img src="assets/img/letras_negro.svg" alt="Logo de Rural House">
-
-		</a> -->
-
+		<a class="navbar-brand" href="#">
+			<img src="/assets/img/Logo.png"  alt="Logo Gelim Novias">
+			
+		</a> 
+		<h3>Gelim Novias </h3>
 		<button
 			class="navbar-toggler"
 			type="button"
@@ -15,9 +15,10 @@
 		>
 			<span class="navbar-toggler-icon"></span>
 		</button>
-
+		
 		<div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
 			<ul class="navbar-nav ms-auto ">
+				
 				<button type="button" class="btn custom-btn" routerLink="/home">Home</button>
 				<button type="button" class="btn custom-btn" routerLink="/vestidos">Vestidos de Novia</button>
 				@if (isAdmin) {

@@ -17,3 +17,7 @@
     align-items: center;
     height: 100vh; /* Esto asegura que el formulario ocupe toda la altura de la ventana */
   }
+  .mover-arriba {
+    position: relative;
+    top: -40px; /* Ajusta este valor según sea necesario */
+}

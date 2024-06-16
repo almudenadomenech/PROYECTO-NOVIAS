@@ -13,6 +13,7 @@ export class ImagesService{
             this.document.location.origin + '/assets/img/img-1.jpg',
             this.document.location.origin + '/assets/img/img-2.jpg',
             this.document.location.origin + '/assets/img/img-3.jpg',
+           
         ]
     }
 }

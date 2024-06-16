@@ -15,7 +15,7 @@
     width: auto; /* Ajusta la anchura automáticamente */
     height: auto; /* Ajusta la altura automáticamente */
   }
-  
+
 
 .bg-welcome {
   background-image: url('https://cdn.pixabay.com/photo/2016/10/22/17/46/mountains-1761292_1280.jpg');
@@ -74,7 +74,7 @@ body {
 }
 
 .card{
-  border: 3px solid #e9c2d9; /* Cambia #ff0000 por el color que desees */
+  border: 1px solid #eb7abb; /* Cambia #ff0000 por el color que desees */
 }
 
   

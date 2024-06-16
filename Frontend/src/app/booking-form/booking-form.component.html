@@ -1,6 +1,6 @@
 
 
-<div class="card mt-5 px-4 naranja-border" style="position:relative; margin-left: 120px; margin-right: 120px;">
+<div class="card mt-5 px-4 rosa-border" style="position:relative; margin-left: 120px; margin-right: 120px;">
   <div class="row">
     <div class="col-lg-8">
 
@@ -28,18 +28,11 @@
 
         @if (vestido) {
           <div class="container" >
-            <h4 class="mb-3" > Reserva de la casa: <strong></strong></h4>
+            <h4 class="mb-3" style="color:  #eb7abb;">  <strong>Reserva tu cita:</strong></h4>
            
           </div>
         }
-       
-
-        
-
-        
-
-       
-
+  
         <label for="dateTime">Fecha</label>
         <div class="form-floating mb-3">
          
@@ -54,10 +47,10 @@
           <textarea class="form-control" placeholder="Leave a comment here" id="comment" formControlName="comment" style="min-height:150px;"></textarea>
           
         </div>
-
+        <div class="button-container-flex">
         <button class="w-50 btn btn1" type="submit">Enviar</button>
-      <button class="w-50 btn btn2" type="button" routerLink="/home">Cancelar</button>
-
+        <button class="w-50 btn btn2" type="button" routerLink="/home">Cancelar</button>
+</div>
        </form> 
 
         

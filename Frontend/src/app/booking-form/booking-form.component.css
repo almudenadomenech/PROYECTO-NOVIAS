@@ -1,9 +1,32 @@
+.rosa-border {
+    border: 2px solid #eb7abb;
+  }
+
 h3{
     text-align: center;
     margin-top: 25px;
 }
 
-.btn1{
-    background-color:  black;
-    color: white;
+.btn1, .btn2{
+    font-size: 20px; /* Cambia el tamaño de la fuente */
+    color:  #ffffff; /* Cambia el color del texto */
+    background-color:  #000000; /* Cambia el color de fondo */
+    padding: 15px; /* Añade espacio interno */
+    border-radius: 5px; /* Redondea las esquinas */
+    text-decoration: none; /* Elimina la subrayado */
+    display: inline-block; /* Asegura que se comporta como un bloque en línea */
+   
+}
+.btn1:hover{
+    background-color:  #eb7abb; /* Cambia el color de fondo al pasar el ratón por encima */
+    color:  #000000;
+}
+
+.btn2:hover{
+    background-color:  rgb(231, 57, 57); /* Cambia el color de fondo al pasar el ratón por encima */
+    color:  #000000;
+}
+.button-container-flex {
+    display: flex;
+    gap: 45px; /* Ajusta el valor del espacio entre los botones */
 }
