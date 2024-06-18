@@ -39,7 +39,10 @@ export class AccountFormComponent implements OnInit{
       this.authService.isAdmin.subscribe(isAdmin => this.isAdmin = isAdmin);
     }
 
-
+    closeConfirmation(): void {
+   
+      this.showConfirmMessage = false; // Suponiendo que showConfirmMessage controla la visibilidad de un mensaje de confirmación
+    }
   ngOnInit(): void {
     this.httpClient.get<User>('http://localhost:3000/users/account').subscribe(user => {
       this.user = user;
