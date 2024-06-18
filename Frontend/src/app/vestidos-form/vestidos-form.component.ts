@@ -188,6 +188,7 @@ export class VestidosFormComponent implements OnInit {
   category: Category | undefined;
   vestido: Vestido | undefined;
   categories: Category[] = [];
+  
 
   vestidosForm = new FormGroup({
     id: new FormControl(),
@@ -217,10 +218,14 @@ export class VestidosFormComponent implements OnInit {
     private vestidosService: VestidosService,
     private activatedRoute: ActivatedRoute
   ) { }
-
+  closeConfirmation(): void {
+   
+    this.showConfirmMessage = false; // Suponiendo que showConfirmMessage controla la visibilidad de un mensaje de confirmación
+  }
   ngOnInit(): void {
     this.loadCategories();
 
+   
     this.activatedRoute.params.subscribe(params => {
       let id = params['id'];
       if (!id)

@@ -240,19 +240,25 @@
                  </div>
  
            </form>
-           @if (showConfirmMessage) {
-             <ngb-alert type="warning" [dismissible]="false" class="mt-4 mb-3" style="min-height: 200px">
-               <p>Casa creada/actualizada correctamente</p>
- 
-               <div style="text-align: center;">
-                 <i class="bi bi-check-lg" style="font-size: 4em;"></i>
-             </div>
- 
-               Para cualquier duda contacte con soporte&commat;casaRural.com
-             </ngb-alert>
- 
- 
-           }
+          
+            @if (showConfirmMessage) {
+                <div class="confirmation-overlay">
+                    <ngb-alert type="warning" [dismissible]="false" class="confirmation-message">
+                        <button type="button" class="close-button" (click)="closeConfirmation()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <p>Vestido creado/actualizado correctamente</p>
+                        <div style="text-align: center;">
+                            <i class="bi bi-check-lg" style="font-size: 4em;"></i>
+                        </div>
+                        Para cualquier duda contacte con soporte&commat;GelimNovias.com
+                    </ngb-alert>
+                </div>
+    
+    
+              }
+          
+          
        </div>
  
    </div>
