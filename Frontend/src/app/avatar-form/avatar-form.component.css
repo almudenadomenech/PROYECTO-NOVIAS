@@ -1,0 +1,49 @@
+.rosa-border {
+    border: 2px solid #eb7abb;
+  }
+
+  .btn1, .btn2{
+    font-size: 20px; /* Cambia el tamaño de la fuente */
+    color:  #ffffff; /* Cambia el color del texto */
+    background-color:  #000000; /* Cambia el color de fondo */
+    padding: 15px; /* Añade espacio interno */
+    border-radius: 5px; /* Redondea las esquinas */
+    text-decoration: none; /* Elimina la subrayado */
+    display: inline-block; /* Asegura que se comporta como un bloque en línea */
+   
+}
+.btn1:hover{
+    background-color:  #eb7abb; /* Cambia el color de fondo al pasar el ratón por encima */
+    color:  #000000;
+}
+
+.btn2:hover{
+    background-color:  rgb(231, 57, 57); /* Cambia el color de fondo al pasar el ratón por encima */
+    color:  #000000;
+}
+
+.confirmation-message {
+    background-color:#f5b5da;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #000000;
+    border: 1px solid #eb7abb;
+}
+.close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: 1px solid #000000; /* Borde sólido de 1px de grosor, color negro */
+  cursor: pointer;
+  outline: none; /* Elimina el contorno al enfocar */
+  padding: 5px; /* Añade un espacio interno alrededor del contenido del botón */
+ 
+}
+
+.close-button span {
+  font-size: 1.5rem;
+  color: #f70000;
+}
