@@ -45,6 +45,10 @@ export class BookingFormComponent implements OnInit {
   private router: Router
  ){}
 
+ closeConfirmation(): void {
+   
+  this.showConfirmMessage = false; // Suponiendo que showConfirmMessage controla la visibilidad de un mensaje de confirmación
+}
   ngOnInit(): void {
      this.activatedRoute.params.subscribe(params => {
       const id = params['id'];
