@@ -8,6 +8,7 @@ import { NgbAlert, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { CurrencyPipe } from '@angular/common';
 import { User } from '../interfaces/user.model';
+import { timer } from 'rxjs';
 
 
 @Component({
@@ -32,7 +33,8 @@ export class BookingFormComponent implements OnInit {
   lastName: new FormControl(),
   email: new FormControl(),
   
-  dateTime: new FormControl(new Date()),
+  date: new FormControl(new Date()),
+  time: new FormControl(),
   
   comment: new FormControl()
 
@@ -68,7 +70,12 @@ export class BookingFormComponent implements OnInit {
       
      
      
-      dateTime: this.bookingForm.get('dateTime')?.value ?? new Date(),
+      date: this.bookingForm.get('date')?.value ?? new Date(),
+      time: this.bookingForm.get('time')?.value ?? (() => {
+        const defaultTime = new Date();
+        defaultTime.setHours(12, 0, 0); // Configura la hora por defecto a las 12:00 PM
+        return defaultTime;
+    })(),
       comment: this.bookingForm.get('comment')?.value ?? '',
 
       vestidos: this.vestido,

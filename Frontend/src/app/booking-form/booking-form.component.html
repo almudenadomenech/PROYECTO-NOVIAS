@@ -11,7 +11,7 @@
             <span aria-hidden="true">&times;</span>
         </button>     
           <br>
-          <br>Para las fechas {{booking?.dateTime}} 
+          <br>Para las fechas {{booking?.date}} 
           <br>
           <br>El código de tu reserva es {{booking?.id}}
           
@@ -31,16 +31,25 @@
 
         @if (vestido) {
           <div class="container" >
-            <h4 class="mb-3" style="color:  #eb7abb;">  <strong>Reserva tu cita:</strong></h4>
+            <h4 class="mb-3" style="color:#eb7abb;">  <strong>Reserva tu cita:</strong></h4>
            
           </div>
         }
   
-        <label for="dateTime">Fecha</label>
+        <label for="date">Fecha</label>
         <div class="form-floating mb-3">
          
-         <input type="datetime-local" class="form-control"
-         id="dateTime" formControlName="dateTime"
+         <input type="date" class="form-control"
+         id="date" formControlName="date"
+         placeholder="">
+         
+       </div>
+
+       <label for="time">Hora</label>
+        <div class="form-floating mb-3">
+         
+         <input type="time" class="form-control"
+         id="time" formControlName="time"
          placeholder="">
          
        </div>
@@ -76,8 +85,10 @@
               <span aria-hidden="true">&times;</span>
           </button>     
             <br>
-            <br>Para las fechas {{booking?.dateTime}} 
+            <br>La fecha de su reserva es: {{booking?.date}} 
             <br>
+            <br>La hora de su reserva es: {{booking?.time}}
+            <br> 
             <br>El código de tu reserva es {{booking?.id}}
             
             <div style="text-align: center;">

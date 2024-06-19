@@ -1,3 +1,4 @@
+import { TimeLike } from "fs";
 import { Category } from "src/category/category.model";
 import { User } from "src/users/users.model";
 import { Vestidos } from "src/vestidos/vestidos.model";
@@ -12,7 +13,10 @@ export class Booking{
 
 
     @Column({type: 'date'})
-    dateTime: Date;
+    date: Date;
+
+    @Column({type: 'time'})
+    time: TimeLike;
 
     @Column({nullable: false})
     comment?: string;

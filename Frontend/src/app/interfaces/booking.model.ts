@@ -6,7 +6,8 @@ export interface Booking{
 
     id: number;
     
-    dateTime?: Date;
+    date?: Date;
+    time?: Time;
    
     comment?: string;
 
