@@ -31,6 +31,11 @@ export class VestidosListComponent implements OnInit {
     this.authService.isAdmin.subscribe(isAdmin => this.isAdmin = isAdmin)
     this.baseUrl = this.imageService.getBaseUrl();
   }
+
+  closeConfirmation(): void {
+   
+    this.showConfirmMessage = false; // Suponiendo que showConfirmMessage controla la visibilidad de un mensaje de confirmación
+  }
   openModal(content: TemplateRef<any>, vestido: Vestido){
     const modalRef = this.modalService.open(content, {
       centered: true

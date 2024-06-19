@@ -1,1 +1,65 @@
-<p>user-detail works!</p>
+<div class="container">
+    <div class="row">
+      <div class="col-14 mt-5">
+  
+  
+        <div class="row row-cols-3 row-cols-sm-2 row-cols-md-2">
+          <div class="col">
+              <div class="card-shadow">
+                @if(users && users.photoUrl){
+                  <a >
+                    
+                    <img class="bd-placeholder-img card-img-top 
+                    highlight-on-hover" [src]="baseUrl + users.photoUrl" 
+                    alt="Imagen">
+                    
+                  </a>
+                }
+                  <a >
+                    @if(users && !users.photoUrl){
+                    <img class="bd-placeholder-img card-img-top" src="/assets/img/usuario-defalult.png" alt="Imagen por defecto">
+                    }
+                  </a>
+             </div>
+    
+            
+          </div>
+          @if (users) { 
+          <div class="detalles">
+            <div class="nombre">
+               <p class="align-right" style="color: #eb7abb">{{users.firstName}}  {{users.lastName}}</p> 
+            </div>
+           
+            <div class="description mt-5">
+              <i class="bi bi-telephone-fill custom-icon" >
+                <span style="margin-left: 15px;">{{users.phone}}</span> 
+              </i>
+              <br>
+              <i class="bi bi-envelope-at-fill custom-icon" ></i>
+              <span style="margin-left: 15px;">{{users.email}}</span> 
+              <br>
+              <i class="bi bi-signpost-fill custom-icon" >
+                <span style="margin-left: 15px;">{{users.street}}</span>
+
+              </i>
+              <br>
+              <i class="bi bi-signpost-fill custom-icon">
+                <span style="margin-left: 15px;">{{users.postalCode}}</span>
+
+              </i>
+              <br>
+              <i class="bi bi-signpost-fill custom-icon" >
+                <span style="margin-left: 15px;">{{users.city}}</span>
+
+              </i>
+            </div>
+           
+          </div>
+        }
+        </div>
+      
+      </div>
+    </div>
+  </div> 
+  
+  

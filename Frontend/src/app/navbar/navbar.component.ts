@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthenticationService } from '../authentication/authentication.service';
+import { User } from '../interfaces/user.model';
 
 @Component({
   selector: 'app-navbar',
@@ -13,10 +14,12 @@ import { AuthenticationService } from '../authentication/authentication.service'
 export class NavbarComponent {
 collapsed=  true;
 isLoggedIn = false;
-
+user: User | undefined;
 userEmail: string | undefined;
 isAdmin = false;
 isUser = false;
+
+userPhotoUrl: string | undefined;
 
 constructor(private authService: AuthenticationService,
   private router: Router

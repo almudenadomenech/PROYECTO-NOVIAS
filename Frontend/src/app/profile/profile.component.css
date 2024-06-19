@@ -1,11 +1,20 @@
-.btn-outline-naranaja {
+.btn-outline-rosa {
     color: #ffffff;
     background-color: rgb(60, 56, 56);
   }
   
-  .btn-outline-naranaja:hover {
+  .btn-outline-rosa:hover {
+    color: #000000;
+    background-color: #eb7abb;
+  }
+  .btn-outline-cancelar {
     color: #ffffff;
-    background-color: #f57d00;
+    background-color: rgb(60, 56, 56);
+  }
+  
+  .btn-outline-cancelar:hover {
+    color: #000000;
+    background-color:rgb(231, 57, 57);
   }
   
   .btn-house-list {
@@ -13,5 +22,5 @@
   }
   
   .naranja-border {
-    border: 2px solid #f57d00;
+    border: 2px solid#eb7abb;
   }

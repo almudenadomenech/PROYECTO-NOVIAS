@@ -3,22 +3,7 @@
       <div class="col-lg-8">
   
         
-          @if (showConfirmMessage) {
-            <div class="confirmation-overlay">
-                <ngb-alert type="warning" [dismissible]="false" class="confirmation-message">
-                    <button type="button" class="close-button" (click)="closeConfirmation()">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <p>Se ha subido la foto correctamente</p>
-                    <div style="text-align: center;">
-                        <i class="bi bi-check-lg" style="font-size: 4em;"></i>
-                    </div>
-                    Para cualquier duda contacte con soporte&commat;GelimNovias.com
-                </ngb-alert>
-            </div>
-
-
-          }
+         
         
         
         
@@ -37,6 +22,7 @@
           <button class="btn2 w-25 py-2 mb-4 mt-3" type= "submit" routerLink="/account">Volver</button>
         </form>
   
+       
       </div>
       <div class="col-lg-4">
   
@@ -51,6 +37,23 @@
    <!--    @else {
         <img class="bd-placeholder-img" src="/assets/img/Usuario2.png" style="width: 80px;">
       } -->
+
+      @if (showConfirmMessage) {
+        <div class="confirmation-overlay">
+            <ngb-alert type="warning" [dismissible]="false" class="confirmation-message">
+                <button type="button" class="close-button" (click)="closeConfirmation()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <p>Se ha subido la foto correctamente</p>
+                <div style="text-align: center;">
+                    <i class="bi bi-check-lg" style="font-size: 4em;"></i>
+                </div>
+                Para cualquier duda contacte con soporte&commat;GelimNovias.com
+            </ngb-alert>
+        </div>
+
+
+      }
     </div>
   </div>
   </div>

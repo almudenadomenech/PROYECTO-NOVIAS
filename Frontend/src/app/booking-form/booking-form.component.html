@@ -69,7 +69,27 @@
             <br>
         }  
              
-    
+        @if (showConfirmMessage) {
+          <div class="confirmation-overlay">
+          <ngb-alert type="warning" [dismissible]="false"class="confirmation-message">
+            <button type="button" class="close-button" (click)="closeConfirmation()">
+              <span aria-hidden="true">&times;</span>
+          </button>     
+            <br>
+            <br>Para las fechas {{booking?.dateTime}} 
+            <br>
+            <br>El código de tu reserva es {{booking?.id}}
+            
+            <div style="text-align: center;">
+              <i class="bi bi-check-lg" style="font-size: 4em;"></i>
+          </div>
+        
+          Para cualquier duda contacte con soporte&commat;GelimNovias.com
+          </ngb-alert>
+         
+        </div>
+  
+        }
       </div> 
 
     

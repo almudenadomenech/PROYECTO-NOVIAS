@@ -1,0 +1,24 @@
+.custom-icon {
+    font-size: 30px;
+    margin-left: 90px;
+    display: inline-block;
+    text-align: center;
+}
+.nombre{
+    text-align: center;
+    font-size: 35px;
+   
+}
+.card-shadow{
+    border: 2px solid #eb7abb; /* Cambia #ff0000 por el color que desees */
+    width: 100%; /* Ajusta esto según el tamaño deseado */
+    /* height: 350px; */
+   
+    overflow: hidden;
+    border: 1px solid #eb7abb; /* Añadir borde opcional */
+    border-radius: 8px; /* Añadir bordes redondeados opcionales */
+  }
+
+
+
+

@@ -2,20 +2,23 @@
   <div class="row">
     <div class="col-12">
 
- <!--      @if (showConfirmMessage) {
-        <ngb-alert type="warning" [dismissible]="false" class="mt-4 mb-3" style="min-height: 200px">
-          <p>El vestido se ha eliminado correctamente</p>
-          
-          <div style="text-align: center;">
-            <i class="bi bi-check-lg" style="font-size: 4em;"></i>
+      
+      @if (showConfirmMessage) {
+        <div class="confirmation-overlay">
+            <ngb-alert type="warning" [dismissible]="false" class="confirmation-message">
+                <button type="button" class="close-button" (click)="closeConfirmation()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <p>El vestido se ha eliminado correctamente</p>
+                <div style="text-align: center;">
+                    <i class="bi bi-check-lg" style="font-size: 4em;"></i>
+                </div>
+                Para cualquier duda contacte con soporte&commat;GelimNovias.com
+            </ngb-alert>
         </div>
-      
-          Para cualquier duda contacte con soporte&commat;casaRural.com
-        </ngb-alert>
-        <button class="w-100 btn btn-outline-naranaja btn-lg" style="margin-bottom: 20px;" routerLink="/home">Volver</button>
-      
-      
-      }  -->
+
+
+      }
      
 
       <h4 class="mt-3">Siluetas</h4>
@@ -45,13 +48,7 @@
                          alt="Imagen">
                   </div>                
                 </a>
-      <!--       @if (vestido.category) {
-                <a (click)="loadVestidos()">
-                  <div class="card-img-container img-fluid">
-                    <img class="card-img-top" [src]="vestido.photoUrl ? (baseUrl + vestido.photoUrl) : '/assets/img/default.jpg'" alt="Imagen">
-                  </div>
-                </a>
-              } -->
+    
                 <div class="card-body">
                   <div class="card-text">
                     <p>{{vestido.description}}</p>
@@ -96,14 +93,14 @@
 </div>
 <ng-template #content let-modal>
   <div class="modal-header">
-    <h4 class="modal-title">¿Desea eliminar esta casa?</h4>
+    <h4 class="modal-title">¿Desea eliminar esta vestido?</h4>
     <button type="button" class="btn-close" aria-label="Cancelar" (click)="modal.dismiss('Cancelar')"></button>
   </div>
   <div class="modal-body">
     <p>Para continuar pulse aceptar</p>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" (click)="modal.close('Aceptar')">Aceptar</button>
+    <button type="button" class="btn btn-dark" (click)="modal.close('Aceptar')">Aceptar</button>
     <button type="button" class="btn btn-danger" (click)="modal.close('Cancelar')">Cancelar</button>
   </div>
 </ng-template>

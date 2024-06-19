@@ -14,6 +14,7 @@ import { RegisterComponent } from './register/register.component';
 import { UserProfileComponent } from './profile/profile.component';
 import { CategoryComponent } from './category/category.component';
 import { CategoryDetailComponent } from './category-detail/category-detail.component';
+import { AvatarFormComponent } from './avatar-form/avatar-form.component';
 
 export const routes: Routes = [
 
@@ -76,6 +77,10 @@ export const routes: Routes = [
     {
         path: 'account',
         component: AccountFormComponent
+    },
+    {
+        path: 'account/avatar',
+        component: AvatarFormComponent
     },
     {
         path: 'login',

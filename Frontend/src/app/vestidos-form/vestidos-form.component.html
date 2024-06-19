@@ -3,24 +3,20 @@
         <div class="col">
 
             @if(!isUpdate){
-            <h4 class="mb-3 mt-4" style="color: #111111">Introduce los detalles del vestido</h4>
+            <h4 class="mb-3 mt-4" style="color: #eb7abb">Introduce los detalles del vestido</h4>
             } @else {
-            <h4 class="mb-3 mt-4" style="color: #0e0d0d">Actualizar</h4>
+            <h4 class="mb-3 mt-4" style="color: #eb7abb">Actualizar</h4>
             }
 
 
             <form class="mt-4" [formGroup]="vestidosForm" (ngSubmit)="save()">
 
                 <input type="hidden" formControlName="id">
-
-                <div class="row">
-                    
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder=""
-                          formControlName="model">
-                        <label for="floatingInput">Modelo</label>
-                      </div>
-
+                <div class="col-md-6 offset-md-3 text-center">
+                    <label for="model" class="form-label">Modelo</label>
+                    <input type="text" class="form-control" id="model">
+                  </div>
+                <div class="row mt-3">
                     <div class="col">
                         <label for="coleccion">Colección</label>
                         <select class="form-select mt-2" id="coleccion" formControlName="coleccion"

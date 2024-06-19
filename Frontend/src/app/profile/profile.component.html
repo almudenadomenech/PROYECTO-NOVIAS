@@ -3,11 +3,11 @@
         <div class="col">
   
             @if(isUpdate){
-              <h4 class="mt-3" style="color: #f57d00">Formulario de registro</h4>
+              <h4 class="mt-3" style="color: #eb7abb">Formulario de registro</h4>
               
              
           } @else {
-              <h4 class="mb-2 mt-4" style="color: #f57d00">Rellenar</h4>
+              <h4 class="mb-2 mt-4" style="color:#eb7abb">Rellenar</h4>
           }
             <h4 style="margin-top: 20px;">Datos de contacto</h4>
             <form class="mt" [formGroup]="userProfile" (ngSubmit)="save()">
@@ -71,14 +71,14 @@
   
                         
                         <div class="mt-4 mb-3" style="margin-left: 20px;">
-                          <button class="btn btn-outline-naranaja w-25 py-2 mb-3 " type="submit">Guardar</button>
+                          <button class="btn btn-outline-rosa w-25 py-2 mb-3 " type="submit">Guardar</button>
                           <span style="margin-left: 110px;"></span>
   
-                          <button class="btn btn-outline-naranaja w-25 py-2 mb-3" type="submit"
+                          <button class="btn btn-outline-cancelar w-25 py-2 mb-3" type="submit"
                               routerLink="/home">Cancelar</button>
                           <span style="margin-left: 110px;"></span>
   
-                          <button class="btn btn-outline-naranaja w-25 py-2 mb-3" type="submit"
+                          <button class="btn btn-outline-rosa w-25 py-2 mb-3" type="submit"
                               routerLink="/login">Omitir</button>
                           <span style="margin-left: 110px;"></span>
   

@@ -30,6 +30,15 @@ export class UsersController {
         });
 
     }
+    @Get('filter-by-photoUrl')
+    findByPhotoUrl(@Param('id', ParseIntPipe) id: string) {
+        return this.userRepository.find({
+            where: {
+                photoUrl: id
+            }
+        });
+    }
+    
     @Get('account')
     @UseGuards(AuthGuard('jwt'))
     public getCurrentAccountUser(@Request() request) {

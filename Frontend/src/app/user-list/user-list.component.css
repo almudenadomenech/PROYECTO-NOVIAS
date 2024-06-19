@@ -1,0 +1,122 @@
+ngb-rating{
+    font-size: 30px;
+
+}
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Puedes ajustar esta altura según tus necesidades */
+    object-fit: cover; /* Esto ayuda a mantener la proporción de la imagen */
+  }
+
+  .btn-outline1 {
+    color: #ffffff;
+    background-color: rgb(60, 56, 56);
+}
+
+.btn-outline1:hover {
+    color: #ffffff;
+    background-color: #080808;
+}
+
+.btn-outline2 {
+    color: #ffffff;
+    background-color: rgb(60, 56, 56);
+}
+
+.btn-outline2:hover {
+    color: #ffffff;
+    background-color: rgb(231, 57, 57);
+}
+.btn-vestidos-list {
+  width: 49% !important;
+}
+
+
+.highlight-on-hover {
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.highlight-on-hover:hover {
+  transform: scale(1.0); 
+  filter: brightness(120%); /* Aumenta el brillo */
+  box-shadow: 0 0 20px rgba(230, 226, 226, 0.5), 0.9; /* Aumenta la sombra */
+}
+.card {
+    height: 200%; /* Ajusta la altura de todas las tarjetas */
+  }
+   
+  .card-img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra completamente el contenedor */
+  }
+  .card-img-container {
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* Mantiene una proporción cuadrada */
+    overflow: hidden;
+  }
+  .custom-badge {
+    font-size: 20px; /* Cambia el tamaño de la fuente */
+    color:  #ffffff; /* Cambia el color del texto */
+    background-color:  #000000; /* Cambia el color de fondo */
+    padding: 15px; /* Añade espacio interno */
+    border-radius: 5px; /* Redondea las esquinas */
+    text-decoration: none; /* Elimina la subrayado */
+    display: inline-block; /* Asegura que se comporta como un bloque en línea */
+    margin: 5px; /* Añade espacio alrededor del elemento */
+}
+
+
+
+.card{
+  border: 2px solid #eb7abb; /* Cambia #ff0000 por el color que desees */
+  width: 100%; /* Ajusta esto según el tamaño deseado */
+  /* height: 350px; */
+ 
+  overflow: hidden;
+  border: 1px solid #eb7abb; /* Añadir borde opcional */
+  border-radius: 8px; /* Añadir bordes redondeados opcionales */
+}
+
+.confirmation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1050; /* Asegura que el mensaje esté por encima de otros elementos */
+}
+
+.confirmation-message {
+  background-color:#f5b5da;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #000000;
+  border: 1px solid #eb7abb;
+}
+.close-button {
+position: absolute;
+top: 5px;
+right: 5px;
+background: none;
+border: 1px solid #000000; /* Borde sólido de 1px de grosor, color negro */
+cursor: pointer;
+outline: none; /* Elimina el contorno al enfocar */
+padding: 5px; /* Añade un espacio interno alrededor del contenido del botón */
+
+}
+
+.close-button span {
+font-size: 1.5rem;
+color: #f70000;
+}

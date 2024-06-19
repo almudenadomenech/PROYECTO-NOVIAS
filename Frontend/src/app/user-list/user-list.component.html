@@ -1,1 +1,183 @@
-<p>user-list works!</p>
+<!-- 
+  <h4 class="mt-5" style="text-align: center;">Listado de usuarios </h4> 
+  <div class="card mt-5 px-4 rosa-border" style="position:relative; margin-left: 120px; margin-right: 120px; z-index: 0;">
+    <div class="row">
+      @if (showConfirmMessage) {
+        <ngb-alert type="warning" [dismissible]="false" class="mt-4 mb-3" style="min-height: 200px">
+          <p>El usuario se ha borrado correctamente</p>
+          
+          <div style="text-align: center;">
+            <i class="bi bi-check-lg" style="font-size: 4em;"></i>
+        </div>
+      
+          Para cualquier duda contacte con soporte&commat;casaRural.com
+        </ngb-alert>
+        <button class="w-100 btn btn-outline-naranaja btn-lg" style="margin-bottom: 20px;" routerLink="/home">Salir</button>
+      
+      
+      }  
+      <div class="col-16">
+        
+       
+        <br>
+        <table class="table">
+    
+            <thead>
+                <tr>
+                <th scope="col" style="color: #eb7abb">Nombre</th>
+               
+                <th scope="col" style="color:  #eb7abb">Apellido</th>
+                <th scope="col" style="color: #eb7abb;"><i class="bi bi-envelope-at-fill" style=" margin-right: 7px;"></i>Email</th>
+                <th scope="col" style="color: #eb7abb; text-align: center;">Acciones</th>
+                </tr>
+              </thead>
+                    <tbody>
+                        @for (user of users; track user.id) {
+                        <tr>
+    
+                          <td>{{user.firstName}}</td>
+                          
+                          <td>{{user.lastName}}</td>
+                          <td>{{user.email}}</td>
+                        
+                          <td>
+                            <button id="detalle" type="button" class="btn btn-outline-naranaja w-50"
+                            [routerLink]="['/user', user.id, 'detail']">
+                            <i class="bi bi-eye"></i>
+                            Detalle</button>
+                            <span style="margin-left: 40px;"></span> 
+                           
+                            <button class="btn btn-outline-naranaja w-25 py-2 " (click)="openModal(content, user)">Eliminar</button>
+                            <span style="margin-left: 40px;"></span> 
+                          </td>
+                       
+                        </tr>
+                         }
+    
+    
+                    </tbody>
+                  </table>
+    
+            </div>
+    
+        </div>
+    
+    </div>
+    <ng-template #content let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title">¿Desea eliminar este ususario?</h4>
+        <button type="button" class="btn-close" aria-label="Cancelar" (click)="modal.dismiss('Cancelar')"></button>
+      </div>
+      <div class="modal-body">
+        <p>Para continuar pulse aceptar</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="modal.close('Aceptar')">Aceptar</button>
+        <button type="button" class="btn btn-danger" (click)="modal.close('Cancelar')">Cancelar</button>
+      </div>
+    </ng-template>
+    <div class="col-8 " style="position: absolute; top: 90px; left: 0; width: 100%; height: 90%; z-index: -1;">
+        <img src= "/assets/img/USUARIOS.jpg" style="width: 100%; height: 100%;" alt=""
+          class="img-fluid">
+      </div> -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="mt-5"> Lista de Usuarios</h4>
+
+
+           
+              <div class="container">
+                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3"> 
+              @for (user of users; track user) {
+                <div class="col">
+      
+              
+                  <div class="col mt-3">
+          
+                    <div class="card">
+                    
+                       <a [routerLink]="['/user', user.id, 'detail']">
+                        <div class="card-img-container img-fluid">
+                          <img class="card-img-top" 
+                               [src]="user.photoUrl ? (baseUrl + user.photoUrl) : '/assets/img/usuario-defalult.png'" 
+                               alt="Imagen">
+                        </div>                
+                      </a>
+          
+                      <div class="card-body">
+                        <div class="card-text">
+                          <p>{{user.firstName}} {{user.lastName}}</p>
+                                              
+                          
+                          <p class="card-text"></p>
+                          @if (isAdmin) {
+                            <button type="button" class="btn btn-outline1 btn-users-list py-2" [routerLink]="['/user', user.id, 'detail']">
+                              Detalles</button>
+                              }
+      
+                            @if(isAdmin){
+                               <button class="btn btn-outline2 btn-vestidos-list py-2 ms-1 " (click)="openModal(content, user)">Eliminar</button> 
+                            <!-- <button id="Borrar" class="btn btn-outline-naranaja btn-house-list py-2 ms-1 " (click)="openModal(content, vestido)"> Eliminar</button> -->
+                            }
+                      </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                          
+                         
+                          
+                        </div>
+                      </div>
+                        
+                    </div>
+          
+          
+                       
+                        <div class="d-flex justify-content-between align-items-center">
+                          
+                          
+                        </div>
+                      </div>
+                </div>
+      
+            }
+              
+            @if (showConfirmMessage) {
+              <div class="confirmation-overlay">
+                  <ngb-alert type="warning" [dismissible]="false" class="confirmation-message">
+                      <button type="button" class="close-button" (click)="closeConfirmation()">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                      <p>El usuario se ha eliminado correctamente</p>
+                      <div style="text-align: center;">
+                          <i class="bi bi-check-lg" style="font-size: 4em;"></i>
+                      </div>
+                      Para cualquier duda contacte con soporte&commat;GelimNovias.com
+                  </ngb-alert>
+              </div>
+  
+  
+            } 
+            
+          </div>
+        </div>
+      </div>
+      <ng-template #content let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title">¿Desea eliminar este usuario?</h4>
+          <button type="button" class="btn-close" aria-label="Cancelar" (click)="modal.dismiss('Cancelar')"></button>
+        </div>
+        <div class="modal-body">
+          <p>Para continuar pulse aceptar</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="modal.close('Aceptar')">Aceptar</button>
+          <button type="button" class="btn btn-danger" (click)="modal.close('Cancelar')">Cancelar</button>
+        </div>
+      </ng-template>
+      
+ 
+      <div class="col-8 " style="position: absolute; top: 90px; left: 0; width: 100%; height: 90%; z-index: -1;">
+        <img src= "/assets/img/USUARIOS.jpg" style="width: 100%; height: 100%;" alt=""
+          class="img-fluid">
+      </div> 
