@@ -27,8 +27,8 @@ export class AvatarFormComponent implements OnInit{
   ngOnInit(): void {
     this.httpClient.get<User>('http://localhost:3000/users/account')
     .subscribe(user => this.user = user);
-  }
-
+  } 
+ 
   onFileChange(event: Event) {
 
     let target = event.target as HTMLInputElement;

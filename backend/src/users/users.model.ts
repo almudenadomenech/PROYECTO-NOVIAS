@@ -25,6 +25,9 @@ export class User{
     @Column({nullable: true})
     email: string;
 
+    @Column({nullable: true})
+    nif?: string;
+
     @Column()
     password: string;
 
