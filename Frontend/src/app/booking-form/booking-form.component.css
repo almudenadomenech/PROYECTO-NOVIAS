@@ -44,27 +44,36 @@ h4{
 }
 
 .confirmation-message {
-    background-color:#f5b5da;
+    background-color:#000000;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    color: #000000;
+    color: #eb7abb;
     border: 1px solid #eb7abb;
+    
 }
 .close-button {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  background: none;
-  border: 1px solid #000000; /* Borde sólido de 1px de grosor, color negro */
-  cursor: pointer;
-  outline: none; /* Elimina el contorno al enfocar */
-  padding: 5px; /* Añade un espacio interno alrededor del contenido del botón */
- 
-}
-
-.close-button span {
-  font-size: 1.5rem;
-  color: #f70000;
-}
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+   
+    cursor: pointer;
+    outline: none; /* Elimina el contorno al enfocar */
+    padding: 5px; /* Añade un espacio interno alrededor del contenido del botón */
+   
+  }
+  
+  .close-button span {
+   
+    color: #ffffff;
+    background-color: #eb7abb; /* Color de fondo del botón */
+    border: none; /* Elimina el borde del botón */
+    padding: 5px 10px; /* Ajusta el padding para hacer el botón más cuadrado */
+    border-radius: 8px; /* Ajusta el border-radius para hacer las esquinas redondeadas */
+    
+  }
+  .p{
+    font-size: 25px;
+  }

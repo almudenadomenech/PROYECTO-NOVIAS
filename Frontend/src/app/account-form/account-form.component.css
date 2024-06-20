@@ -2,7 +2,7 @@
     border: 2px solid #eb7abb;
   }
 
-  .btn1, .btn2, .btn3{
+  .btn1, .btn2, .btn3, .btn4{
     font-size: 20px; /* Cambia el tamaño de la fuente */
     color:  #ffffff; /* Cambia el color del texto */
     background-color:  #000000; /* Cambia el color de fondo */
@@ -12,7 +12,7 @@
     display: inline-block; /* Asegura que se comporta como un bloque en línea */
    
 }
-.btn1:hover, .btn3:hover{
+.btn1:hover, .btn3:hover, .btn4:hover{
     background-color:  #eb7abb; /* Cambia el color de fondo al pasar el ratón por encima */
     color:  #000000;
 }
@@ -34,20 +34,21 @@
   z-index: 1050; /* Asegura que el mensaje esté por encima de otros elementos */
 }
 .confirmation-message {
-    background-color:#f5b5da;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    color: #000000;
-    border: 1px solid #eb7abb;
+  background-color:#000000;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #eb7abb;
+  border: 1px solid #eb7abb;
+  
 }
 .close-button {
   position: absolute;
   top: 5px;
   right: 5px;
   background: none;
-  border: 1px solid #000000; /* Borde sólido de 1px de grosor, color negro */
+ 
   cursor: pointer;
   outline: none; /* Elimina el contorno al enfocar */
   padding: 5px; /* Añade un espacio interno alrededor del contenido del botón */
@@ -55,10 +56,31 @@
 }
 
 .close-button span {
-  font-size: 1.5rem;
-  color: #f70000;
+ 
+  color: #ffffff;
+  background-color: #eb7abb; /* Color de fondo del botón */
+  border: none; /* Elimina el borde del botón */
+  padding: 5px 10px; /* Ajusta el padding para hacer el botón más cuadrado */
+  border-radius: 8px; /* Ajusta el border-radius para hacer las esquinas redondeadas */
+  
+}
+.p{
+  font-size: 25px;
 }
 
+.img-thumbnail {
+  width: 120px; /* Tamaño más pequeño */
+  height: 120px; /* Tamaño más pequeño */
+  object-fit: cover;
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  float: right; /* Alinea la imagen a la derecha */
+  margin-left: 10px; /* Espacio entre la imagen y el contenido */
+  border: 2px solid #eb7abb; /* Agrega un borde de color rosa */
+}
+
+.text-center {
+  position: relative; /* Asegura que el float funcione correctamente */
+}
 
 
 

@@ -33,7 +33,19 @@ h3{
     color:#eb7abb
 }
 
-
+.img-thumbnail {
+    width: 120px; /* Tamaño más pequeño */
+    height: 120px; /* Tamaño más pequeño */
+    object-fit: cover;
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    float: right; /* Alinea la imagen a la derecha */
+    margin-left: 10px; /* Espacio entre la imagen y el contenido */
+    border: 2px solid #eb7abb; /* Agrega un borde de color rosa */
+  }
+  
+  .text-center {
+    position: relative; /* Asegura que el float funcione correctamente */
+  }
 
 
 

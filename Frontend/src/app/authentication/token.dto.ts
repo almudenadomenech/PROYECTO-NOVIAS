@@ -4,6 +4,7 @@ export interface Token {
   
   // Token JWT decodificado para acceder a sus datos
   export interface DecodedToken {
+    photoUrl: string;
     sub: number;
     email: string;
     role: string;

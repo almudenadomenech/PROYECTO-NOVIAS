@@ -10,15 +10,54 @@
    
 }
 .card-shadow{
-    border: 2px solid #eb7abb; /* Cambia #ff0000 por el color que desees */
+    border: 2px solid #ffffff; /* Cambia #ff0000 por el color que desees */
     width: 100%; /* Ajusta esto según el tamaño deseado */
     /* height: 350px; */
    
     overflow: hidden;
-    border: 1px solid #eb7abb; /* Añadir borde opcional */
-    border-radius: 8px; /* Añadir bordes redondeados opcionales */
+    
   }
+  .img-thumbnail {
+    width: 380px; /* Tamaño de la imagen */
+    height: 380px; /* Tamaño de la imagen */
+    object-fit: cover; /* Ajuste de la imagen */
+    border-radius: 8px; /* Borde cuadrado con esquinas redondeadas */
+    margin-left: 20px; /* Mueve la imagen 90px a la derecha */
+    border: 2px solid #eb7abb; /* Borde de color rosa */
+  }
+  
+  .btn1{
+    font-size: 20px; /* Cambia el tamaño de la fuente */
+    color:  #ffffff; /* Cambia el color del texto */
+    background-color:  #000000; /* Cambia el color de fondo */
+    padding: 15px; /* Añade espacio interno */
+    border-radius: 5px; /* Redondea las esquinas */
+    text-decoration: none; /* Elimina la subrayado */
+    display: inline-block; /* Asegura que se comporta como un bloque en línea */
+    margin-left: 40px;
+  }
+.btn1:hover{
+    background-color:  #eb7abb; /* Cambia el color de fondo al pasar el ratón por encima */
+    color:  #000000;
+}
 
-
-
-
+.card-shadow {
+    width: 500px; /* Ancho del contenedor */
+    height: 400px;
+  }
+  
+  .imagen {
+    width: 200px; /* Ancho del contenedor */
+    height: 200px; /* Alto del contenedor */
+    overflow: hidden; /* Oculta cualquier desbordamiento de contenido */
+   
+  }
+  
+  .imagen img {
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: 100%; /* Ajusta el alto de la imagen al 100% del contenedor */
+    object-fit: cover; /* Ajusta la imagen para cubrir completamente el contenedor manteniendo la relación de aspecto */
+  
+  }
+  
+  

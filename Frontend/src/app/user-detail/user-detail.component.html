@@ -11,15 +11,17 @@
                     
                     <img class="bd-placeholder-img card-img-top 
                     highlight-on-hover" [src]="baseUrl + users.photoUrl" 
-                    alt="Imagen">
+                    alt="Imagen" class="img-thumbnail">
                     
                   </a>
                 }
+                <div class="imagen">
                   <a >
                     @if(users && !users.photoUrl){
                     <img class="bd-placeholder-img card-img-top" src="/assets/img/usuario-defalult.png" alt="Imagen por defecto">
                     }
                   </a>
+                </div>
              </div>
     
             
@@ -59,6 +61,7 @@
         </div>
       
       </div>
+      <button class="btn1 w-25 py-2 mb-3 mt-3" routerLink="/user" type="submit">Volver</button>
     </div>
   </div> 
   

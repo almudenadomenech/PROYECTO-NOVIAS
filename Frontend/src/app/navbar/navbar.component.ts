@@ -19,13 +19,12 @@ userEmail: string | undefined;
 isAdmin = false;
 isUser = false;
 
-userPhotoUrl: string | undefined;
+
 
 constructor(private authService: AuthenticationService,
   private router: Router
 ){
   this.authService.isLoggedIn.subscribe(isLoggedIn => this.isLoggedIn = isLoggedIn);
- 
   this.authService.userEmail.subscribe(userEmail => this.userEmail = userEmail);
   this.authService.isAdmin.subscribe(isAdmin => this.isAdmin = isAdmin);
   this.authService.isUser.subscribe(isUser => this.isUser = isUser);

@@ -1,32 +1,30 @@
 <nav class="navbar navbar-expand-lg bg-black navbar-custom">
-	<div class="container-fluid" >
+	<div class="container-fluid">
 		<a class="navbar-brand" href="#">
-			<img src="/assets/img/Logo.png"  alt="Logo Gelim Novias">
-			
-		</a> 
+			<img src="/assets/img/Logo.png" alt="Logo Gelim Novias">
+
+		</a>
 		<h3>Gelim Novias </h3>
-		<button
-			class="navbar-toggler"
-			type="button"
-			aria-controls="navbarContent"
-			[attr.aria-expanded]="!collapsed"
-			aria-label="Toggle navigation"
-			(click)="collapsed = !collapsed"
-		>
+		
+		<button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed"
+			aria-label="Toggle navigation" (click)="collapsed = !collapsed">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		
+
 		<div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
 			<ul class="navbar-nav ms-auto ">
-				
+
 				<button type="button" class="btn custom-btn" routerLink="/home">Home</button>
 				<button type="button" class="btn custom-btn" routerLink="/vestidos">Vestidos de Novia</button>
 				@if (isAdmin) {
 				<li class="nav-item" ngbDropdown>
-					<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown2" role="button"> Añadir y modificar </a>
+					<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown2" role="button"> Añadir y
+						modificar </a>
 					<div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
-						<a ngbDropdownItem routerLink="/vestidos" (click)="$event.preventDefault()"style="background-color: #000000;">Vestidos</a>
-						<a ngbDropdownItem routerLink="/vestidos/create" (click)="$event.preventDefault()" style="background-color: #000000;">Añadir</a>
+						<a ngbDropdownItem routerLink="/vestidos" (click)="$event.preventDefault()"
+							style="background-color: #000000;">Vestidos</a>
+						<a ngbDropdownItem routerLink="/vestidos/create" (click)="$event.preventDefault()"
+							style="background-color: #000000;">Añadir</a>
 
 
 
@@ -35,75 +33,75 @@
 				</li>
 				}
 				@if (isLoggedIn) {
-					<li class="nav-item" ngbDropdown display="dynamic" placement="bottom-end">
-						<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button"> Pedir cita </a>
-						<div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
-							<a ngbDropdownItem routerLink="/booking" (click)="$event.preventDefault()" style="background-color: #000000;">Listado de
-								Reservas</a>
-								
-							
-									
-					
-				
-							
-						</div>
-	
-					</li>
-					
+				<li class="nav-item" ngbDropdown display="dynamic" placement="bottom-end">
+					<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button"> Pedir cita
+					</a>
+					<div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
+						<a ngbDropdownItem routerLink="/booking" (click)="$event.preventDefault()"
+							style="background-color: #000000;">Listado de
+							Reservas</a>
+
+
+
+
+
+
+					</div>
+
+				</li>
+
 				}
 
 				@if (isAdmin) {
-					<li class="nav-item" ngbDropdown display="dynamic" placement="bottom-end">
-						<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button"> Usuarios </a>
-						<div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
-							<a ngbDropdownItem routerLink="/user" (click)="$event.preventDefault()" style="background-color: #000000;">Lista de usuarios</a>
-	
-						</div>
-					</li>
-	
-					
+				<li class="nav-item" ngbDropdown display="dynamic" placement="bottom-end">
+					<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button"> Usuarios </a>
+					<div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
+						<a ngbDropdownItem routerLink="/user" (click)="$event.preventDefault()"
+							style="background-color: #000000;">Lista de usuarios</a>
+
+					</div>
+				</li>
+
+
 				}
 
 				@if (userEmail) {
-					<!-- <i class="bi bi-person mt-1" style="font-size: 25px; color:#f111ae;"></i> -->
-					<li class="nav-item" ngbDropdown display="dynamic" placement="bottom-end">
-						<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button">{{userEmail.split('@')[0]}}</a>
-						<div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
-							<a ngbDropdownItem routerLink="/account" (click)="$event.preventDefault()" style="background-color: #000000;">
-								Editar Perfil
-							</a>
-							<a ngbDropdownItem (click)="logout();" style="cursor: pointer;background-color: #000000;">
-								Cerrar Sesión
-							</a>
-								
-						</div>
-						
-						
-	
-					</li>
-					
 
-					
+				
+				<li class="nav-item" ngbDropdown display="dynamic" placement="bottom-end">
+					<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3"
+						role="button">{{userEmail.split('@')[0]}}</a>
+					<div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
+						<a ngbDropdownItem routerLink="/account" (click)="$event.preventDefault()"
+							style="background-color: #000000;">
+							Editar Perfil
+						</a>
+						<a ngbDropdownItem (click)="logout();" style="cursor: pointer;background-color: #000000;">
+							Cerrar Sesión
+						</a>
+
+					</div>
+				</li>
 				}
 
-				
-				
 				@if(isLoggedIn){
-					
-						@if (user?.photoUrl) {
-							<img class="img-fluid mb-3 rounded-circle" style="width: 80px; height: 80px;" [src]="'http://localhost:3000/uploads/' + user?.photoUrl">
-						} @else {
-							<img src="/assets/img/usuario-defalult.png" alt="" width="32" height="32" class="rounded-circle me-2">
-						}
+
+				@if (user?.photoUrl) {
+				<img [src]="'http://localhost:3000/uploads/' + user?.photoUrl" alt="Foto de perfil"
+					class="img-thumbnail">
 				} @else {
-					<button type="button" class="btn btn-white ms-2" routerLink="/login">
-						Login
-						
-					  </button>
-					  <button type="button" class="btn btn-white ms-2" routerLink="/register">
-						Registro
-						
-					  </button>
+				<img src="/assets/img/usuario-defalult.png" alt="" width="32" height="32" 
+				class="rounded-circle me-2">
+				}
+				} @else {
+				<button type="button" class="btn btn-white ms-2" routerLink="/login">
+					Login
+
+				</button>
+				<button type="button" class="btn btn-white ms-2" routerLink="/register">
+					Registro
+
+				</button>
 				}
 
 

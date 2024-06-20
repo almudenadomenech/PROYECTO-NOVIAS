@@ -9,11 +9,13 @@
   }
   
   .carousel-img {
-    max-width: 150%;
-    max-height: 150%;
-    object-fit: contain; /* Ajusta la imagen dentro del contenedor sin recortar */
-    width: auto; /* Ajusta la anchura automáticamente */
-    height: auto; /* Ajusta la altura automáticamente */
+    width: 100%;
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
   }
 
 
@@ -60,10 +62,13 @@ body {
   height: 100%; /* Hace que todas las cards tengan la misma altura */
 }
 
-.card img {
-  height: 100%; /* Hace que todas las imágenes dentro de las cards tengan la misma altura */
-  object-fit: cover; /* Ajusta la imagen para que cubra todo el espacio disponible sin distorsionarse */
+.hr-custom {
+  border-style: solid; /* Cambia el estilo de borde a sólido */
+  border-width: 2px; /* Grosor del borde */
+  border-color: #eb7abb; /* Color del borde */
+  border-radius: 5px; /* Radio de las esquinas para hacer la línea más suave */
 }
+
 
 .container {
   margin-top: 5rem;

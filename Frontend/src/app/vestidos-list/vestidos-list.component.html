@@ -11,9 +11,9 @@
                 </button>
                 <p>El vestido se ha eliminado correctamente</p>
                 <div style="text-align: center;">
-                    <i class="bi bi-check-lg" style="font-size: 4em;"></i>
+                    <i class="bi bi-check-lg" style="font-size: 3em;"></i>
                 </div>
-                Para cualquier duda contacte con soporte&commat;GelimNovias.com
+               <p>Para cualquier duda contacte con soporte&commat;GelimNovias.com</p> 
             </ngb-alert>
         </div>
 
@@ -21,10 +21,10 @@
       }
      
 
-      <h4 class="mt-3">Siluetas</h4>
+      <h4 class="mt-3 silueta" >Siluetas</h4>
 
       @for (category of categories; track category.id) {
-        <a class="badge  me-2  custom-badge"
+        <a class="badge  me-4  custom-badge mt-3"
         [routerLink]="['/categories', category.id, 'detail']">
         
           {{category.name}}
@@ -37,7 +37,7 @@
           <div class="col">
 
         
-            <div class="col mt-3">
+            <div class="col mt-2">
     
               <div class="card ">
               
@@ -100,8 +100,8 @@
     <p>Para continuar pulse aceptar</p>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-dark" (click)="modal.close('Aceptar')">Aceptar</button>
-    <button type="button" class="btn btn-danger" (click)="modal.close('Cancelar')">Cancelar</button>
+    <button type="button" class="btn btn-outline1" (click)="modal.close('Aceptar')">Aceptar</button>
+    <button type="button" class="btn btn-outline2" (click)="modal.close('Cancelar')">Cancelar</button>
   </div>
 </ng-template>
 
