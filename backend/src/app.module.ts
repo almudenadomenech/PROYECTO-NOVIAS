@@ -17,6 +17,8 @@ import { extname } from 'path';
 import { JwtValidator } from './users/jwt.validator';
 import { CategoryController } from './category/category.controller';
 import { Category } from './category/category.model';
+import { VestidosFiestaController } from './vestidos-fiesta/vestidos-fiesta.controller';
+import { VestidoFiesta } from './vestidos-fiesta/vestidos-fiesta.model';
 @Module({
   imports: [
     PassportModule,
@@ -41,13 +43,13 @@ import { Category } from './category/category.model';
       username: 'root',
       password: 'admin',
       database: 'novias',
-      entities: [Vestidos, Booking, User, Category],
+      entities: [Vestidos, Booking, User, Category, VestidoFiesta],
       synchronize: true, 
       logging: true
     }),
-    TypeOrmModule.forFeature([Vestidos, Booking, User, Category])
+    TypeOrmModule.forFeature([Vestidos, Booking, User, Category, VestidoFiesta])
   ],
-  controllers: [AppController, VestidosController, BookingController, UsersController, CategoryController],
+  controllers: [AppController, VestidosController, BookingController, UsersController, CategoryController, VestidosFiestaController],
   providers: [AppService, JwtValidator],
 })
 export class AppModule {}

@@ -15,6 +15,9 @@ import { UserProfileComponent } from './profile/profile.component';
 import { CategoryComponent } from './category/category.component';
 import { CategoryDetailComponent } from './category-detail/category-detail.component';
 import { AvatarFormComponent } from './avatar-form/avatar-form.component';
+import { VestidosFiestaListComponent } from './vestidos-fiesta-list/vestidos-fiesta-list.component';
+import { VestidosFiestaDetailComponent } from './vestidos-fiesta-detail/vestidos-fiesta-detail.component';
+import { VestidosFiestaFormComponent } from './vestidos-fiesta-form/vestidos-fiesta-form.component';
 
 export const routes: Routes = [
 
@@ -41,6 +44,22 @@ export const routes: Routes = [
     {
         path: 'vestidos/:id/update',
         component: VestidosFormComponent
+    },
+    {
+        path: 'vestidos-fiesta',
+        component: VestidosFiestaListComponent
+    },
+    {
+        path: 'vestidos-fiesta/:id/detail',
+        component: VestidosFiestaDetailComponent
+    },
+    {
+        path: 'vestidos-fiesta/create',
+        component: VestidosFiestaFormComponent
+    },
+    {
+        path: 'vestidos-fiesta/:id/update',
+        component: VestidosFiestaFormComponent
     },
     {
         path:'booking',
