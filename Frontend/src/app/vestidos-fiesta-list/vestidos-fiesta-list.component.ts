@@ -1,24 +1,23 @@
- 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit, TemplateRef, inject } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { Vestido } from '../interfaces/vestido.model';
-import { ImageService } from '../shared/image.service';
 import { NgbAlert, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { AuthenticationService } from '../authentication/authentication.service';
+import { VestidoFiesta } from '../interfaces/vestido-fiesta.model';
 import { Category } from '../interfaces/category.model';
+import { AuthenticationService } from '../authentication/authentication.service';
+import { ImageService } from '../shared/image.service';
 
 @Component({
-  selector: 'app-vestidos-list',
+  selector: 'app-vestidos-fiesta-list',
   standalone: true,
   imports: [HttpClientModule, RouterLink, NgbAlert],
-  templateUrl: './vestidos-list.component.html',
-  styleUrls: ['./vestidos-list.component.css']
+  templateUrl: './vestidos-fiesta-list.component.html',
+  styleUrl: './vestidos-fiesta-list.component.css'
 })
-export class VestidosListComponent implements OnInit {
+export class VestidosFiestaListComponent implements OnInit {
 
-  vestidos: Vestido [] = [];
-  categories: Category[] = [];
+  vestidosFiesta: VestidoFiesta [] = [];
+  categories:  Category[] = [];
   baseUrl: string;
   isAdmin = false;
   showConfirmMessage = false;
@@ -36,42 +35,35 @@ export class VestidosListComponent implements OnInit {
    
     this.showConfirmMessage = false; // Suponiendo que showConfirmMessage controla la visibilidad de un mensaje de confirmación
   }
-  openModal(content: TemplateRef<any>, vestido: Vestido){
+
+  openModal(content: TemplateRef<any>, vestidosFiesta: VestidoFiesta){
     const modalRef = this.modalService.open(content, {
       centered: true
     });
     modalRef.result.then(result => {
       if(result === 'Aceptar'){
         console.log('Ha pulsado borrar vestido');
-        this.deleteById(vestido);
+        this.deleteById(vestidosFiesta);
         
       }
     });
   }
-   ngOnInit(): void {
-
+  ngOnInit(): void {
     this.httpClient.get<Category[]>('http://localhost:3000/category')
     .subscribe(categories => this.categories = categories);
     this.loadVestidos();
+}
+loadVestidos(): void{
+  this.httpClient.get<VestidoFiesta[]>('http://localhost:3000/vestidos-fiesta')
+    .subscribe( vestidosFiestaFromBackend=> this.vestidosFiesta = vestidosFiestaFromBackend);
+
+}
+deleteById(vestidosFiesta: VestidoFiesta){
    
-  } 
-
- 
-
-  loadVestidos(): void{
-    this.httpClient.get<Vestido[]>('http://localhost:3000/vestidos')
-      .subscribe( vestidosFromBackend=> this.vestidos = vestidosFromBackend);
-
-   
-  }
-
-  deleteById(vestido: Vestido){
-   
-    this.httpClient.delete<Vestido>('http://localhost:3000/vestidos/' + vestido.id)
-      .subscribe(() => {
-       this.showConfirmMessage = true;
-       this.loadVestidos();
-      });
+  this.httpClient.delete<VestidoFiesta>('http://localhost:3000/vestidos-fiesta/' + vestidosFiesta.id)
+    .subscribe(() => {
+     this.showConfirmMessage = true;
+     this.loadVestidos();
+    });
 }
 }
- 

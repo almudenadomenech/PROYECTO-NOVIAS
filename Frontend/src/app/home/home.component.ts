@@ -29,14 +29,11 @@ export class HomeComponent implements OnInit {
   }
   ngOnInit(): void {
    this.images = this.imageService.getImages();
-   //this.categoryId();
+  
   }
 
   
-   /* categoryId(): void{
-    this.httpClient.get<Category[]>(`http://localhost:3000/category/filter-by-id/${id}`) 
-    .subscribe(categories => this.categories = categories);
-  }  */
+   
 
   
 }

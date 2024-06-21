@@ -14,7 +14,7 @@
 		<div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
 			<ul class="navbar-nav ms-auto ">
 
-				<button type="button" class="btn custom-btn" routerLink="/home">Home</button>
+				<button type="button" class="btn custom-btn" routerLink="/vestidos-fiesta">Vestidos de Fiesta</button>
 				<button type="button" class="btn custom-btn" routerLink="/vestidos">Vestidos de Novia</button>
 				@if (isAdmin) {
 				<li class="nav-item" ngbDropdown>
@@ -22,10 +22,13 @@
 						modificar </a>
 					<div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
 						<a ngbDropdownItem routerLink="/vestidos" (click)="$event.preventDefault()"
-							style="background-color: #000000;">Vestidos</a>
+							style="background-color: #000000;">Vestidos de Novia</a>
 						<a ngbDropdownItem routerLink="/vestidos/create" (click)="$event.preventDefault()"
-							style="background-color: #000000;">Añadir</a>
-
+							style="background-color: #000000;">Añadir vestidos de Novia</a>
+							<a ngbDropdownItem routerLink="/vestidos-fiesta" (click)="$event.preventDefault()"
+							style="background-color: #000000;">Vestidos de Fiesta</a>
+						<a ngbDropdownItem routerLink="/vestidos-fiesta/create" (click)="$event.preventDefault()"
+							style="background-color: #000000;">Añadir vestidos de Fiesta</a>
 
 
 
