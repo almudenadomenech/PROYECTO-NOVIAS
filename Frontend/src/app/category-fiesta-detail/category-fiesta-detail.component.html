@@ -1,0 +1,92 @@
+@if (categoryFiesta) {
+    <div class="mt-4 text-center" >
+      
+        <h1 class="mb-4" style="color:#000000;"  >{{categoryFiesta.name}}</h1>
+        
+      </div>
+}
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h3 class="center-text" style="color:#eb7abb;">{{categoryFiesta?.descripcion}}</h3>
+
+      
+    </div>
+  
+  </div>
+</div>
+
+
+<div class="album py-4 bg-white">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3"> 
+    @for (vestidoFiesta of vestidosFiesta; track vestidoFiesta) {
+      <div class="col">
+
+    
+        <div class="col mt-5">
+
+          <div class="card ">
+          
+             <a [routerLink]="['/vestidos-fiesta', vestidoFiesta.id, 'detail']">
+              <div class="card-img-container img-fluid">
+                <img class="card-img-top" 
+                     [src]="vestidoFiesta.photoUrl ? (baseUrl + vestidoFiesta.photoUrl) : '/assets/img/default.jpg'" 
+                     alt="Imagen">
+              </div>                
+            </a>
+ 
+            <div class="card-body">
+              <div class="card-text">
+                <p>{{vestidoFiesta.description}}</p>
+                                    
+                
+                <p class="card-text"> <strong>{{vestidoFiesta.price}} €</strong>                     
+                </p>
+                @if (isAdmin) {
+                  <button type="button" class="btn btn-outline1 btn-vestidos-list py-2" [routerLink]="['/vestidos-fiesta', vestidoFiesta.id, 'update']">
+                    Editar</button>
+                    }
+
+                  @if(isAdmin){
+                     <button class="btn btn-outline2 btn-vestidos-list py-2 ms-1 " (click)="openModal(content, vestidoFiesta)">Eliminar</button> 
+                 
+                  }
+            </div>
+              <div class="d-flex justify-content-between align-items-center">
+                
+               
+                
+              </div>
+            </div>
+              
+         
+                
+                
+              </div>
+            </div>
+      </div>
+
+  }
+    
+   
+  
+</div>
+</div>
+</div>
+<ng-template #content let-modal>
+<div class="modal-header">
+<h4 class="modal-title">¿Desea eliminar este vestido?</h4>
+<button type="button" class="btn-close" aria-label="Cancelar" (click)="modal.dismiss('Cancelar')"></button>
+</div>
+<div class="modal-body">
+<p>Para continuar pulse aceptar</p>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" (click)="modal.close('Aceptar')">Aceptar</button>
+<button type="button" class="btn btn-danger" (click)="modal.close('Cancelar')">Cancelar</button>
+</div>
+</ng-template>
+
+

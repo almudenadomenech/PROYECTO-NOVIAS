@@ -1,0 +1,28 @@
+.center-text {
+    text-align: center;
+}
+.btn-outline1 {
+    color: #ffffff;
+    background-color: rgb(60, 56, 56);
+}
+
+.btn-outline1:hover {
+    color: #000000;
+    background-color: #eb7abb;
+}
+
+.btn-outline2 {
+    color: #ffffff;
+    background-color: rgb(60, 56, 56);
+}
+
+.btn-outline2:hover {
+    color: #000000;
+    background-color: rgb(231, 57, 57);
+}
+.h1{
+    color: red;
+}
+.card{
+    border: 1px solid #eb7abb; /* Cambia #ff0000 por el color que desees */
+  }
