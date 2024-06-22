@@ -12,10 +12,10 @@
             <form class="mt-4" [formGroup]="vestidosFiestaForm" (ngSubmit)="save()">
 
                 <input type="hidden" formControlName="id">
-                <div class="col-md-6 offset-md-3 text-center">
+                <!-- <div class="col-md-6 offset-md-3 text-center">
                     <label for="model" class="form-label">Modelo</label>
                     <input type="text" class="form-control" id="model">
-                  </div>
+                  </div> -->
                 <div class="row mt-3">
                     <div class="col">
                         <label for="coleccion">Colección</label>
@@ -24,9 +24,10 @@
 
                             <option>Selecciona Colección</option>
                             <option value="Atelier">Atelier</option>
+                            <option value="Gelim">Gelim</option>
                             <option value="InLove">InLove</option>
                             <option value="Rose">Rose</option>
-                            <option value="Gelim">Gelim</option>
+                            
 
                         </select>
 
@@ -35,16 +36,9 @@
                   
                     
                     <div class="col">
-                        <label for="category">Categoría</label>
-                        <select class="form-select mt-2" id="category" formControlName="categoryId" aria-label="category">
-                            <option value="" disabled>Selecciona Categoría</option>
-                            <ng-container >
-                                @for (category of categories; track category)
-                                {
-                                    <option [value]="category.id">{{ category.name }}</option>
-                                }
-                            </ng-container>
-                        </select>
+                        <label for="model">Modelo</label>
+                        <input type="text"  class="form-control mt-2" id="model"
+                            formControlName="model" placeholder="" aria-label="model">
                     </div>
                     
 
@@ -54,10 +48,15 @@
                             aria-label="corte" [compareWith]="compareObjects">
 
                             <option>Selecciona Corte</option>
-                            <option value="sirena">Sirena</option>
+                            <option value="Ajustado">Ajustado</option>
+                            <option value="Corto">Corto</option>  
+                            <option value="Largo">Largo</option>
                             <option value="recto">Recto</option>
-                            <option value="Corte A">Corte A</option>                            
-                            <option value="Princesa">Princesa</option>
+                            <option value="sirena">Sirena</option>
+                            
+                                                      
+                           
+                            
 
                         </select>
 
@@ -68,18 +67,18 @@
                             aria-label="escote" [compareWith]="compareObjects">
 
                             <option>Selecciona Escote</option>
-                            <option value="Halter">Halter</option>
+                            <option value="Barco">Barco</option>
+                            <option value="Caja">Caja</option>
                             <option value="Cisne">Cisne</option>
                             <option value="Corazon">Corazón</option>
-                            <option value="Redondo">Redondo</option>
-                            <option value="Caja">Caja</option>
+                            <option value="Cuadrado">Cuadrado</option>
                             <option value="Drapeado">Drapeado</option>
                             <option value="En Pico">En Pico</option>
-                            <option value="Palabra de Honor">Palabra de Honor</option>
-                            <option value="Transparente">Transparente</option>
                             <option value="Envolvente">Envolvente</option>
-                            <option value="Cuadrado">Cuadrado</option>
-
+                            <option value="Halter">Halter</option>
+                            <option value="Redondo">Redondo</option>
+                            <option value="Transparente">Transparente</option>
+                            <option value="Palabra de Honor">Palabra de Honor</option>
                         </select>
 
                     </div>                  
@@ -92,13 +91,11 @@
                             <select class="form-select mt-2" id="tipoCola" formControlName="mangas"
                                 aria-label="managas" [compareWith]="compareObjects">
     
-                                <option>Selecciona Tipo de Cola</option>
+                                <option>Selecciona Tipo de Mangas</option>
                                 <option value="Corta">Corta</option>
-                                <option value="Capilla">Capilla</option>
-                                <option value="Catedral">Catedral</option>
-                                <option value="Real">Real</option>
-                                <option value="Semicatedral">Semicatedral</option>
-    
+                                <option value="Larga">Larga</option>
+                                <option value="Sin mangas">Sin mangas</option>
+                                <option value="Tres cuartos">Tres cuartos</option>
                             </select>
     
                         </div>
@@ -109,13 +106,14 @@
                                 aria-label="tejidos" [compareWith]="compareObjects">
     
                                 <option>Selecciona Tejidos</option>
-                                <option value="Tul">Tul</option>
                                 <option value="Crepe">Crepe</option>
-                                <option value="Pedrería">Pedería</option>
                                 <option value="Pedrería">Encaje</option>
                                 <option value="Gasa">Gasa</option>
                                 <option value="Glitter">Glitter</option>
                                 <option value="Mikado">Mikado</option>
+                                <option value="Pedrería">Pedería</option>
+                                <option value="Tul">Tul</option>    
+                                <option value="Otros">Otros</option>
     
                             </select>
     
@@ -126,21 +124,23 @@
                                 aria-label="espalda" [compareWith]="compareObjects">
     
                                 <option>Selecciona Espalda</option>
-                                <option value="Halter">Halter</option>
                                 <option value="Abertura">Abertura</option>
-                                <option value="Barco">Barco</option>
-                                <option value="Caja">Caja</option>
-                                <option value="Corazón">Corazón</option>
-                                <option value="Cruzado">Cruzado</option>
                                 <option value="Asimétrico">Asimétrico</option>
                                 <option value="Bañera">Bañera</option>
+                                <option value="Barco">Barco</option>
+                                <option value="Caja">Caja</option>
                                 <option value="Cisne">Cisne</option>
+                                <option value="Corazón">Corazón</option>
                                 <option value="Corsé">Corsé</option>
+                                <option value="Cruzado">Cruzado</option>
                                 <option value="Cuadrado">Cuadrado</option>
+                                <option value="Descubierto">Descubierto</option>
                                 <option value="En pico">En pico</option>
-                                <option value="Palabra de Honor">Palabra de Honor</option>
                                 <option value="Envolvente">Envolvente</option>
                                 <option value="Espalda baja">Espalda baja</option>
+                                <option value="Halter">Halter</option>
+                                <option value="Palabra de Honor">Palabra de Honor</option>
+                                <option value="Redondeado">Redondeado</option>                                
                             </select>
     
                         </div>
@@ -168,12 +168,13 @@
                                     aria-label="tallas" [compareWith]="compareObjects">
     
                                     <option>Selecciona Tallas</option>
-                                    <option value="32-64">32-64</option>
-                                    <option value="32-52">32-52</option>
-                                    <option value="32-60">32-60</option>
                                     <option value="32-48">32-48</option>
+                                    <option value="32-52">32-52</option>
+                                    <option value="32-64">32-64</option>
                                     <option value="32-58">32-58</option>
-                                    <
+                                    <option value="32-60">32-60</option>
+                                    <option value="34-60">34-60</option>
+                                    <option value="36-50">36-50</option>
     
                                 </select>
     
@@ -231,7 +232,7 @@
                     <span style="margin-left: 10px;"></span>
                    <button class="btn btn2-outline w-25 py-2 mb-3" type="submit" routerLink="/home">Cancelar</button>
                    <span style="margin-left: 10px;"></span>
-                   <button class="btn btn3-outline w-25 py-2 mb-3" type="submit" routerLink="/vestidos">Volver</button>
+                   <button class="btn btn3-outline w-25 py-2 mb-3" type="submit" routerLink="/vestidos-fiesta">Volver</button>
  
                  </div>
  

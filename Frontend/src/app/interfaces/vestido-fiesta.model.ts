@@ -1,5 +1,6 @@
 import { Booking } from "./booking.model";
-import { Category } from "./category.model";
+
+import { CategoryFiesta } from "./categoryFiesta.model";
 import { User } from "./user.model";
 
 export interface VestidoFiesta{
@@ -23,6 +24,6 @@ export interface VestidoFiesta{
 
     booking?: Booking;
     user?: User;
-    categories: Category[];
+    categoriesFiesta: CategoryFiesta[];
 
 }

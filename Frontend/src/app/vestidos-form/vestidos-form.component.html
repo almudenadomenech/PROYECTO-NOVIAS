@@ -12,10 +12,10 @@
             <form class="mt-4" [formGroup]="vestidosForm" (ngSubmit)="save()">
 
                 <input type="hidden" formControlName="id">
-                <div class="col-md-6 offset-md-3 text-center">
+                <!-- <div class="col-md-6 offset-md-3 text-center">
                     <label for="model" class="form-label">Modelo</label>
                     <input type="text" class="form-control" id="model">
-                  </div>
+                  </div> -->
                 <div class="row mt-3">
                     <div class="col">
                         <label for="coleccion">Colección</label>
@@ -35,16 +35,9 @@
                   
                     
                     <div class="col">
-                        <label for="category">Categoría</label>
-                        <select class="form-select mt-2" id="category" formControlName="categoryId" aria-label="category">
-                            <option value="" disabled>Selecciona Categoría</option>
-                            <ng-container >
-                                @for (category of categories; track category)
-                                {
-                                    <option [value]="category.id">{{ category.name }}</option>
-                                }
-                            </ng-container>
-                        </select>
+                        <label for="model">Modelo</label>
+                        <input type="text" id="model"
+                            formControlName="model" placeholder="" aria-label="model">
                     </div>
                     
 

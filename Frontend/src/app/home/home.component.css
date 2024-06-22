@@ -62,13 +62,10 @@ body {
   height: 100%; /* Hace que todas las cards tengan la misma altura */
 }
 
-.hr-custom {
-  border-style: solid; /* Cambia el estilo de borde a sólido */
-  border-width: 2px; /* Grosor del borde */
-  border-color: #eb7abb; /* Color del borde */
-  border-radius: 5px; /* Radio de las esquinas para hacer la línea más suave */
+.card img {
+  height: 100%; /* Hace que todas las imágenes dentro de las cards tengan la misma altura */
+  object-fit: cover; /* Ajusta la imagen para que cubra todo el espacio disponible sin distorsionarse */
 }
-
 
 .container {
   margin-top: 5rem;
@@ -82,4 +79,7 @@ body {
   border: 1px solid #eb7abb; /* Cambia #ff0000 por el color que desees */
 }
 
-  
+.vestido{
+  position: relative; 
+  top: -3px;  
+}  

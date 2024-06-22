@@ -1,79 +1,79 @@
 
 .btn1-outline {
-    color: #ffffff;
-    background-color: rgb(76, 75, 75);
-  }
-  
-  .btn1-outline:hover {
-    color: #000000;
-    background-color: #eb7abb;
-  }
-  .btn2-outline {
-    color: #ffffff;
-    background-color: rgb(76, 75, 75);
-  }
-  
-  .btn2-outline:hover {
-    color: #000000;
-    background-color: rgb(231, 57, 57);;
-  }
-  .btn3-outline {
-    color: #ffffff;
-    background-color: rgb(76, 75, 75);
-  }
-  
-  .btn3-outline:hover {
-    color: #070707;
-    background-color: #eb7abb;
-  }
-  .rosa-border {
-    border: 2px solid #eb7abb;
-  }
+  color: #ffffff;
+  background-color: rgb(76, 75, 75);
+}
 
-  .confirmation-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1050; /* Asegura que el mensaje esté por encima de otros elementos */
+.btn1-outline:hover {
+  color: #000000;
+  background-color: #eb7abb;
+}
+.btn2-outline {
+  color: #ffffff;
+  background-color: rgb(76, 75, 75);
+}
+
+.btn2-outline:hover {
+  color: #000000;
+  background-color: rgb(231, 57, 57);;
+}
+.btn3-outline {
+  color: #ffffff;
+  background-color: rgb(76, 75, 75);
+}
+
+.btn3-outline:hover {
+  color: #070707;
+  background-color: #eb7abb;
+}
+.rosa-border {
+  border: 2px solid #eb7abb;
+}
+
+.confirmation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1050; /* Asegura que el mensaje esté por encima de otros elementos */
 }
 
 .confirmation-message {
-    background-color:#000000;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    color: #eb7abb;
-    border: 1px solid #eb7abb;
-    
+  background-color:#000000;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #eb7abb;
+  border: 1px solid #eb7abb;
+  
 }
 .close-button {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  background: none;
- 
-  cursor: pointer;
-  outline: none; /* Elimina el contorno al enfocar */
-  padding: 5px; /* Añade un espacio interno alrededor del contenido del botón */
- 
+position: absolute;
+top: 5px;
+right: 5px;
+background: none;
+
+cursor: pointer;
+outline: none; /* Elimina el contorno al enfocar */
+padding: 5px; /* Añade un espacio interno alrededor del contenido del botón */
+
 }
 
 .close-button span {
- 
-  color: #ffffff;
-  background-color: #eb7abb; /* Color de fondo del botón */
-  border: none; /* Elimina el borde del botón */
-  padding: 5px 10px; /* Ajusta el padding para hacer el botón más cuadrado */
-  border-radius: 8px; /* Ajusta el border-radius para hacer las esquinas redondeadas */
-  
+
+color: #ffffff;
+background-color: #eb7abb; /* Color de fondo del botón */
+border: none; /* Elimina el borde del botón */
+padding: 5px 10px; /* Ajusta el padding para hacer el botón más cuadrado */
+border-radius: 8px; /* Ajusta el border-radius para hacer las esquinas redondeadas */
+
 }
 .p{
-  font-size: 25px;
+font-size: 25px;
 }

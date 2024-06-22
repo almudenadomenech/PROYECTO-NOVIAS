@@ -24,7 +24,7 @@ export class VestidosFiestaFormComponent implements OnInit{
 
   vestidosFiestaForm = new FormGroup ({
     id: new FormControl(),
-    model: new FormControl (''),
+    model: new FormControl(''),
     coleccion: new FormControl(''),
     price: new FormControl(0, [Validators.min(500), Validators.max(10000)]),
     photoUrl: new FormControl(''),

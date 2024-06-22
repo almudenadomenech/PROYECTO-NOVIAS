@@ -1,0 +1,38 @@
+.description{
+    margin-left: 50px;
+}
+h4{
+    margin-left: 230px;
+}
+
+.icon-price {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .price {
+    margin-right: 45px; /* Ajusta el espaciado según tus necesidades */
+  }
+  .reservar{
+    margin-top: 45px;
+    background-color: #eb7abb;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+   border-radius: 15px;
+  }
+  .reservar:hover{
+    background-color:  #000000; /* Cambia el color de fondo al pasar el ratón por encima */
+    color:  #ffffff;
+  }
+  h3{
+    color: black;
+  }
+
+  .align-right {
+    text-align: center;
+    font-size: 35px;
+}
+
+  
