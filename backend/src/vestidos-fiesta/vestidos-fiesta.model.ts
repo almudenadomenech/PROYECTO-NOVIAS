@@ -1,5 +1,5 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { Category } from "src/category/category.model";
+import { CategoryFiesta } from "src/category-fiesta/category-fiesta.model";
 import { Column, Entity, JoinTable, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
@@ -59,9 +59,9 @@ export class VestidoFiesta{
     tallas: string;
 
     @ApiProperty({example: [{id: 1}]})
-    @ManyToOne(() => Category, {eager: true})
+    @ManyToOne(() => CategoryFiesta, {eager: true})
     @JoinTable()
-    categories: Category[];
+    categoriesFiesta: CategoryFiesta[];
 
      /* @ManyToOne(() => Category, (category) => category.vestidos, { eager: true })
     category: Category;  */

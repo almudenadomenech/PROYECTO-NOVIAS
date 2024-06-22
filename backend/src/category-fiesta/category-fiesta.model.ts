@@ -1,9 +1,8 @@
-
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
-export class Category{
-
+export class CategoryFiesta{
+    
     @PrimaryGeneratedColumn()
     id: number;
 
@@ -13,5 +12,4 @@ export class Category{
     @Column({nullable: false})
     descripcion: string;
 
-   
 }

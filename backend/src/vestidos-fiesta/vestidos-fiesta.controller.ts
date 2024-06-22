@@ -22,11 +22,11 @@ findById(@Param('id', ParseIntPipe) id: number){
      }
  });
 }
-@Get('filter-by-category-id/:id')
+@Get('filter-by-categoryFiesta-id/:id')
 findByCategoryId(@Param('id', ParseIntPipe) id:number) {
  return this.vestidosFiestaRepository.find({
      where: {
-         categories: {
+         categoriesFiesta: {
              id: id
          }
      }
@@ -61,13 +61,13 @@ findByCategoryId(@Param('id', ParseIntPipe) id:number) {
  } 
 
  @Get('filter-by-model')
- findByModel(@Param('id', ParseIntPipe) id: string) {
-     return this.vestidosFiestaRepository.find({
-         where: {
-             model: id
-         }
-     });
- } 
+    findByModel(@Param('id', ParseIntPipe) id: string) {
+        return this.vestidosFiestaRepository.find({
+            where: {
+                model: id
+            }
+        });
+    } 
  @Get('filter-by-description')
  findByDescription(@Param('id', ParseIntPipe) id: string) {
      return this.vestidosFiestaRepository.find({
