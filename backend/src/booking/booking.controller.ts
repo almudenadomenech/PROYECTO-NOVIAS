@@ -17,14 +17,22 @@ export class BookingController {
     }
 
   
-      @Get(':id')
+    /*   @Get(':id')
     findById(@Param('id', ParseIntPipe) id: number){
         return this.bookingRepository.findOne({
             where: {
                 id: id
             }
         });
-    }   
+    }  */  
+        @Get('filter-by-id/:id')
+        findById(@Param('id', ParseIntPipe) id :number){
+            return this.bookingRepository.findOne({
+                where: {
+                    id: id
+                }
+            });
+        } 
 
     @Get('filter-by-user/:id')
     findByUserId(@Param('id', ParseIntPipe) id: number){

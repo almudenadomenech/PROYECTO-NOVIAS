@@ -59,7 +59,7 @@ ngb-rating{
     width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
     height: auto; /* Mantiene la relación de aspecto de la imagen */
   }
-  
+ 
   .custom-badge {
     font-size: 20px; /* Cambia el tamaño de la fuente */
     color:  #ffffff; /* Cambia el color del texto */

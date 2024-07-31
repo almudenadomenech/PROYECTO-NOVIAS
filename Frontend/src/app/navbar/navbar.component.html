@@ -37,19 +37,15 @@
 				}
 				@if (isLoggedIn) {
 				<li class="nav-item" ngbDropdown display="dynamic" placement="bottom-end">
-					<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button"> Pedir cita
+					<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button"> Reservas
 					</a>
 					<div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
-						<a ngbDropdownItem routerLink="/booking" (click)="$event.preventDefault()"
+						
+							<a ngbDropdownItem routerLink="/booking" (click)="$event.preventDefault()"
 							style="background-color: #000000;">Listado de
 							Reservas</a>
-
-
-
-
-
-
 					</div>
+					
 
 				</li>
 
