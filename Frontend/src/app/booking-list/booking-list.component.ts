@@ -2,7 +2,7 @@ import { Component, inject, OnInit, TemplateRef } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgbAlert, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Booking } from '../interfaces/booking.model';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { AuthenticationService } from '../authentication/authentication.service';
 
 @Component({
@@ -43,8 +43,6 @@ export class BookingListComponent implements OnInit{
       });
   
     } 
-  
- 
   ngOnInit(): void {
     this.loadBookings();
   }
