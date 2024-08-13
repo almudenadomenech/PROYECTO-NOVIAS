@@ -14,8 +14,13 @@
 		<div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
 			<ul class="navbar-nav ms-auto ">
 
-				<button type="button" class="btn custom-btn" routerLink="/vestidos-fiesta">Vestidos de Fiesta</button>
-				<button type="button" class="btn custom-btn" routerLink="/vestidos">Vestidos de Novia</button>
+				<li class="nav-item">
+					<a class="nav-link btn custom-btn" routerLink="/vestidos-fiesta">Vestidos de Fiesta</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link btn custom-btn" routerLink="/vestidos">Vestidos de Novia</a>
+				</li>
+				
 				@if (isAdmin) {
 				<li class="nav-item" ngbDropdown>
 					<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown2" role="button"> Añadir y
@@ -65,7 +70,6 @@
 				}
 
 				@if (userEmail) {
-
 				
 				<li class="nav-item" ngbDropdown display="dynamic" placement="bottom-end">
 					<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3"
@@ -84,7 +88,7 @@
 				}
 
 				@if(isLoggedIn){
-
+					
 				@if (user?.photoUrl) {
 				<img [src]="'http://localhost:3000/uploads/' + user?.photoUrl" alt="Foto de perfil"
 					class="img-thumbnail">

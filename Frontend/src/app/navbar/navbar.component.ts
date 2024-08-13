@@ -34,7 +34,7 @@ constructor(private authService: AuthenticationService, private httpClient: Http
 ngOnInit(): void {
   this.httpClient.get<User>('http://localhost:3000/users/account').subscribe(user => {
     this.user = user;
-    
+
   });
 }
   
