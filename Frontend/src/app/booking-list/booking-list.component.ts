@@ -27,7 +27,7 @@ export class BookingListComponent implements OnInit{
     }
     closeConfirmation(): void {
    
-      this.showConfirmMessage = false; // Suponiendo que showConfirmMessage controla la visibilidad de un mensaje de confirmación
+      this.showConfirmMessage = false; 
     } 
     openModal(content: TemplateRef<any>, bookings: Booking) {
       const modalRef = this.modalService.open(content, {
@@ -56,7 +56,7 @@ export class BookingListComponent implements OnInit{
     this.httpClient.delete<Booking>('http://localhost:3000/booking/' + booking.id)
       .subscribe(() => {
         this.showConfirmMessage = true;
-        // this.bookings = this.bookings.filter(booking => booking.id !== booking.id);
+       
         this.loadBookings();
       });
   }

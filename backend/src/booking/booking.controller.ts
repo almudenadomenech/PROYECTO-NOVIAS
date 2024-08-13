@@ -102,7 +102,31 @@ findWithFilter(@Query() filters: any) {
         where: filters
     });
 }
-    
+/* @Get('check-availability')
+async checkAvailability(
+  @Query('time') timeString: string
+) {
+  // Convertir la cadena de tiempo a un objeto Date con la fecha de referencia
+  const time = new Date(`1970-01-01T${timeString}:00Z`); // 1970-01-01 es una fecha de referencia
+
+  // Extraer solo la hora y minutos para la comparación
+  const timeStringOnly = `${time.getUTCHours()}:${time.getUTCMinutes()}`;
+
+  // Consulta para verificar la disponibilidad
+  const existingBooking = await this.bookingRepository.findOne({
+    where: {
+      time: timeStringOnly
+    }
+  });
+
+  if (existingBooking) {
+    return { available: false };
+  } else {
+    return { available: true };
+  }
+} */
+
+   
 @Post()
 @UseGuards(AuthGuard('jwt'))
 create(@Body() booking: Booking, @Request() request) {
