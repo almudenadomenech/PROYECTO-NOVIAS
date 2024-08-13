@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthenticationService } from '../authentication/authentication.service';
 import { User } from '../interfaces/user.model';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-navbar',
@@ -11,7 +12,7 @@ import { User } from '../interfaces/user.model';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit{
 collapsed=  true;
 isLoggedIn = false;
 user: User | undefined;
@@ -21,7 +22,7 @@ isUser = false;
 
 
 
-constructor(private authService: AuthenticationService,
+constructor(private authService: AuthenticationService, private httpClient: HttpClient,
   private router: Router
 ){
   this.authService.isLoggedIn.subscribe(isLoggedIn => this.isLoggedIn = isLoggedIn);
@@ -30,6 +31,13 @@ constructor(private authService: AuthenticationService,
   this.authService.isUser.subscribe(isUser => this.isUser = isUser);
 
 }
+ngOnInit(): void {
+  this.httpClient.get<User>('http://localhost:3000/users/account').subscribe(user => {
+    this.user = user;
+    
+  });
+}
+  
 
 logout(){
   this.authService.logout();

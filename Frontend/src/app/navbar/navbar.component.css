@@ -34,12 +34,12 @@ h3{
 }
 
 .img-thumbnail {
-    width: 120px; /* Tamaño más pequeño */
-    height: 120px; /* Tamaño más pequeño */
+    width: 70px; /* Tamaño más pequeño */
+    height: 70px; /* Tamaño más pequeño */
     object-fit: cover;
     border-radius: 50%; /* Hace que la imagen sea circular */
     float: right; /* Alinea la imagen a la derecha */
-    margin-left: 10px; /* Espacio entre la imagen y el contenido */
+    margin-left: 15px; /* Espacio entre la imagen y el contenido */
     border: 2px solid #eb7abb; /* Agrega un borde de color rosa */
   }
   
