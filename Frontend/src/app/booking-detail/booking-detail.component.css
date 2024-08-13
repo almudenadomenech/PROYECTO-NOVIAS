@@ -1,0 +1,11 @@
+.btn-outline{
+    color: #ffffff;
+    background-color: rgb(60, 56, 56);
+}
+.btn-outline:hover {
+    color: #ffffff;
+    background-color: #080808;
+}
+.rosa-border {
+    border: 2px solid #eb7abb;
+  }
