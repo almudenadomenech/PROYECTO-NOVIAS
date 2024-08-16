@@ -1,6 +1,7 @@
 import { Time } from "@angular/common";
 import { Vestido } from "./vestido.model";
 import { User } from "./user.model";
+import { VestidoFiesta } from "./vestido-fiesta.model";
 
 export interface Booking{
 
@@ -12,5 +13,6 @@ export interface Booking{
     comment?: string;
 
     vestidos?: Vestido;
+    vestidoFiesta?: VestidoFiesta;
     users?: User;
 }

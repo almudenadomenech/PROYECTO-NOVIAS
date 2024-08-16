@@ -30,6 +30,7 @@
           <thead>
   
               <tr>
+                <th scope="col" style="color: #eb7abb"><i class="bi bi-hourglass" style="margin-right: 7px;"></i>Foto</th>
               <th scope="col" style="color: #eb7abb" ><i class="bi bi-calendar-day" style="margin-right: 7px;"></i>Fecha</th>
               <!-- <th scope="col">Fecha de salida</th> -->
               <th scope="col" style="color: #eb7abb"><i class="bi bi-hourglass" style="margin-right: 7px;"></i>Hora</th>
@@ -45,6 +46,7 @@
                 <tbody>
                   @for (booking of bookings; track booking.id) {
                   <tr>
+                  
                     <td>{{booking.date}}</td>
                     <td>{{booking.time}}</td>
                     <td>{{booking.comment}}</td>

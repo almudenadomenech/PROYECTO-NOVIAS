@@ -45,7 +45,7 @@ import { CategoryFiesta } from './category-fiesta/category-fiesta.model';
       username: 'root',
       password: 'admin',
       database: 'novias',
-      entities: [Vestidos, Booking, User, Category, VestidoFiesta, CategoryFiesta],
+      entities: [Vestidos, Booking, User, Category, VestidoFiesta, CategoryFiesta, ],
       synchronize: true, 
       logging: true
     }),
@@ -53,5 +53,6 @@ import { CategoryFiesta } from './category-fiesta/category-fiesta.model';
   ],
   controllers: [AppController, VestidosController, BookingController, UsersController, CategoryController, VestidosFiestaController, CategoryFiestaController],
   providers: [AppService, JwtValidator],
+  
 })
 export class AppModule {}
