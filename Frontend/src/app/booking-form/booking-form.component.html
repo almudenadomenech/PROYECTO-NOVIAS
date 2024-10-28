@@ -1,113 +1,67 @@
-
-
 <div class="card mt-5 px-4 rosa-border" style="position:relative; margin-left: 120px; margin-right: 120px;">
   <div class="row">
+    <!-- Contenedor para el formulario (columna izquierda) -->
     <div class="col-lg-8">
-
       @if (showConfirmMessage) {
-        <div class="confirmation-overlay">
-        <ngb-alert type="warning" [dismissible]="false"class="confirmation-message">
+      <div class="confirmation-overlay">
+        <ngb-alert type="warning" [dismissible]="false" class="confirmation-message">
           <button type="button" class="close-button" (click)="closeConfirmation()">
             <span aria-hidden="true">&times;</span>
-        </button>     
+          </button>
           <br>
-          <br>Para las fechas {{booking?.date}} 
+          <br>Para las fechas {{booking?.date}}
           <br>
           <br>El código de tu reserva es {{booking?.id}}
-          
+
           <div style="text-align: center;">
             <i class="bi bi-check-lg" style="font-size: 3em;"></i>
-        </div>
-      
-        <p>Para cualquier duda contacte con soporte&commat;GelimNovias.com</p>
-        </ngb-alert>
-       
-      </div>
-
-      } @else {
-        <form class="mt-4"
-        [formGroup]="bookingForm"
-        (ngSubmit)="save()">
-
-        @if (vestido) {
-          <div class="container" >
-            <h4 class="mb-3" style="color:#eb7abb;">  <strong>Reserva tu cita:</strong></h4>
-           
           </div>
+
+          <p>Para cualquier duda contacte con soporte&commat;GelimNovias.com</p>
+        </ngb-alert>
+      </div>
+      } @else {
+      <form class="mt-4" [formGroup]="bookingForm" (ngSubmit)="save()">
+        @if (vestido) {
+        <div class="container">
+          <h4 class="mb-3" style="color:#eb7abb;"> <strong>Reserva tu cita:</strong></h4>
+        </div>
         }
-  
+
         <label for="date">Fecha</label>
         <div class="form-floating mb-3">
-         
-         <input type="date" class="form-control"
-         id="date" formControlName="date"
-         placeholder="">
-         
-       </div>
+          <input type="date" class="form-control" id="date" formControlName="date" placeholder="">
+        </div>
 
-       <label for="time">Hora</label>
+        <label for="time">Hora</label>
         <div class="form-floating mb-3">
-         
-         <input type="time" class="form-control"
-         id="time" formControlName="time"
-         placeholder="">
-         
-       </div>
+          <input type="time" class="form-control" id="time" formControlName="time" placeholder="">
+        </div>
 
         <label for="comment">Comentarios</label>
         <div class="form-floating">
-          <textarea class="form-control" placeholder="Leave a comment here" id="comment" formControlName="comment" style="min-height:150px;"></textarea>
-          
+          <textarea class="form-control" placeholder="Leave a comment here" id="comment" formControlName="comment"
+            style="min-height:150px;"></textarea>
         </div>
-        <div class="button-container-flex">
-        <button class="w-50 btn btn1" type="submit">Enviar</button>
-        <!-- volver a donde estabas. NO LO HACE BIEN -->
-        <button class="w-50 btn btn2" type="button" routerLink="/home">Cancelar</button>
-</div>
-       </form>        
-        <div _ngcontent-ng-c3189770292="" >
-          <div> 
-            @if (bookingForm) {
-              <div class="d-grid gap-2 mt-3">
-                     
-               </div>
-            }
-              </div> 
-          </div> 
-          
-  
-            <br>
-        }  
-             
-        @if (showConfirmMessage) {
-          <div class="confirmation-overlay">
-          <ngb-alert type="warning" [dismissible]="false"class="confirmation-message">
-            <button type="button" class="close-button" (click)="closeConfirmation()">
-              <span aria-hidden="true">&times;</span>
-          </button>     
-            <br>
-            <br>La fecha de su reserva es: {{booking?.date}} 
-            <br>
-            <br>La hora de su reserva es: {{booking?.time}}
-            <br> 
-            <br>El código de tu reserva es {{booking?.id}}
-            
-            <div style="text-align: center;">
-              <i class="bi bi-check-lg" style="font-size: 4em;"></i>
-          </div>
-        
-          Para cualquier duda contacte con soporte&commat;GelimNovias.com
-          </ngb-alert>
-         
-        </div>
-  
-        }
-      </div> 
 
-    
+        <div class="button-container-flex">
+          <button class="w-50 btn btn1" type="submit">Enviar</button>
+          <button class="w-50 btn btn2" type="button" routerLink="/home">Cancelar</button>
+        </div>
+      </form>
+
+      <br>
+      } 
+    </div>
+
+    <!-- Contenedor para la imagen (columna derecha) -->
+    <div class="col-lg-4 d-flex align-items-center justify-content-center">
+      @if(vestido && vestido.photoUrl){
+      <a>
+        <img class="bd-placeholder-img card-img-top highlight-on-hover" [src]="baseUrl + vestido.photoUrl" 
+          alt="Imagen" style="max-width: 100%; height: auto;">
+      </a>
+      }
+    </div>
   </div>
 </div>
-
-
- 
-

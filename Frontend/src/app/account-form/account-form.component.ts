@@ -30,7 +30,8 @@ export class AccountFormComponent implements OnInit {
     nif: new FormControl(),
     street: new FormControl(),
     city: new FormControl(),
-    postalCode: new FormControl()
+    postalCode: new FormControl(),
+    photoUrl: new FormControl()
   });
 
   constructor(private httpClient: HttpClient, private authService: AuthenticationService) {
@@ -53,7 +54,8 @@ export class AccountFormComponent implements OnInit {
         phone: user.phone,
         street: user.street,
         city: user.city,
-        postalCode: user.postalCode
+        postalCode: user.postalCode,
+        photoUrl: user.photoUrl
       });
     });
   }

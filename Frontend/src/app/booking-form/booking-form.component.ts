@@ -9,6 +9,7 @@ import { NgbAlert, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 import { CurrencyPipe } from '@angular/common';
 import { User } from '../interfaces/user.model';
 import { timer } from 'rxjs';
+import { ImageService } from '../shared/image.service';
 
 
 @Component({
@@ -22,8 +23,9 @@ export class BookingFormComponent implements OnInit {
  
  booking: Booking | undefined;
  vestido: Vestido | undefined;
-  user: User | undefined;
+ user: User | undefined;
  showConfirmMessage = false;
+ baseUrl: string;
 
 
  bookingForm = new FormGroup({
@@ -44,8 +46,12 @@ export class BookingFormComponent implements OnInit {
  constructor(
   private httpClient: HttpClient,
   private activatedRoute: ActivatedRoute,
-  private router: Router
- ){}
+  private router: Router,
+  private imageService: ImageService
+  
+ ){this.baseUrl = this.imageService.getBaseUrl();
+
+ }
 
  closeConfirmation(): void {
    
