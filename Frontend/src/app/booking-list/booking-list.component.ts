@@ -4,6 +4,7 @@ import { NgbAlert, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Booking } from '../interfaces/booking.model';
 import { HttpClient } from '@angular/common/http';
 import { AuthenticationService } from '../authentication/authentication.service';
+import { ImageService } from '../shared/image.service';
 
 @Component({
   selector: 'app-booking-list',
@@ -18,13 +19,17 @@ export class BookingListComponent implements OnInit{
   isAdmin = false;
   bookings: Booking[] = [];
   showConfirmMessage = false;
+  baseUrl: string;
+
   private modalService = inject(NgbModal);
   
   constructor(private httpClient: HttpClient,
-    private authService: AuthenticationService){
+    private authService: AuthenticationService,
+    private imageService: ImageService){
 
     this.authService.isAdmin.subscribe(isAdmin => this.isAdmin = isAdmin);
-    }
+    this.baseUrl = this.imageService.getBaseUrl();
+  }
     closeConfirmation(): void {
    
       this.showConfirmMessage = false; 

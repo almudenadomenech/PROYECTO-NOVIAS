@@ -40,7 +40,8 @@ export class BookingFormComponent implements OnInit {
   date: new FormControl(new Date()),
   time: new FormControl(),
   
-  comment: new FormControl()
+  comment: new FormControl(),
+  //phtoUrl: new FormControl()
 
  });
   
@@ -62,29 +63,25 @@ export class BookingFormComponent implements OnInit {
 }
 ngOnInit(): void {
   this.activatedRoute.params.subscribe(params => {
-    const id = params['id'];
-    if (!id) return;
+   const id = params['id'];
+   if(!id) return;
 
-    // Obtener vestido
-    this.httpClient.get<Vestido>(`http://localhost:3000/vestidos/${id}`).subscribe(
-      vestido => {
-        this.vestido = vestido; // Almacenar el vestido
-      },
-      error => {
-        console.error('Error al obtener vestido', error);
-      }
-    );
+   this.httpClient.get<Vestido>(`http://localhost:3000/vestidos/${id}`).subscribe(vestido => {
+     this.vestido = vestido;
+     
+   });
 
-    // Obtener vestido de fiesta
-    this.httpClient.get<VestidoFiesta>(`http://localhost:3000/vestidosFiesta/${id}`).subscribe(
-      vestidoFiesta => {
-        this.vestidoFiesta = vestidoFiesta; // Almacenar el vestido de fiesta
-      },
-      error => {
-        console.error('Error al obtener vestido de fiesta', error);
-      }
-    );
   });
+  this.activatedRoute.params.subscribe(params => {
+    const id = params['id'];
+    if(!id) return;
+ 
+    this.httpClient.get<VestidoFiesta>(`http://localhost:3000/vestidos-fiesta/${id}`).subscribe(vestidoFiesta => {
+      this.vestidoFiesta = vestidoFiesta;
+     
+    });
+ 
+   });
 }
 
 
@@ -93,9 +90,6 @@ ngOnInit(): void {
   save(): void{
      const booking: Booking = {
       id: this.bookingForm.get('id')?.value ?? 0,
-      
-     
-     
       date: this.bookingForm.get('date')?.value ?? new Date(),
       time: this.bookingForm.get('time')?.value ?? (() => {
         const defaultTime = new Date();
@@ -103,13 +97,11 @@ ngOnInit(): void {
         return defaultTime;
     })(),
       comment: this.bookingForm.get('comment')?.value ?? '',
-
       vestidos: this.vestido,
-      vestidoFiesta: this.vestidoFiesta
-
-      
+      vestidoFiesta: this.vestidoFiesta,
+      photoUrl: this.vestido?.photoUrl || this.vestidoFiesta?.photoUrl   
      };
-
+     console.log('Booking:', booking);
      this.httpClient.post<Booking>('http://localhost:3000/booking', booking)
      .subscribe(booking => {
      
@@ -119,3 +111,4 @@ ngOnInit(): void {
  }
  }
  
+

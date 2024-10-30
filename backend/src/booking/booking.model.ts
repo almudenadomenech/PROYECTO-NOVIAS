@@ -23,12 +23,15 @@ export class Booking{
     @Column({nullable: false})
     comment?: string;
 
+    @Column({nullable: true})
+    photoUrl?: string;
+
 
     @ManyToOne(() => Vestidos, {eager: true})
     vestidos: Vestidos;
     
     @ManyToOne(() => VestidoFiesta, {eager: true})
-    vestidosFiesta: VestidoFiesta;
+    vestidoFiesta: VestidoFiesta;
 
     @ManyToOne(() => User, {eager: true})
     user: User;

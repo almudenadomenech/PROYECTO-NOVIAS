@@ -1,95 +1,96 @@
 <div style="position: relative; top: -150px;  width: 100%; height: 100px; z-index: -1; ">
-    <img class="img-fluid" src="/assets/img/booking-list.jpg" >
-  </div>
-  
-  <div class="card mt-5 px-4 rosa-border" style="position:relative; margin-left: 120px; margin-right: 120px; z-index: 0;">
-    <div class="row">
-      @if (showConfirmMessage) {
-        <div class="confirmation-overlay">
-            <ngb-alert type="warning" [dismissible]="false" class="confirmation-message">
-                <button type="button" class="close-button" (click)="closeConfirmation()">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <p>El vestido se ha eliminado correctamente</p>
-                <div style="text-align: center;">
-                    <i class="bi bi-check-lg" style="font-size: 3em;"></i>
-                </div>
-               <p>Para cualquier duda contacte con soporte&commat;GelimNovias.com</p> 
-            </ngb-alert>
+  <img class="img-fluid" src="/assets/img/booking-list.jpg">
+</div>
+
+<div class="card mt-5 px-4 rosa-border" style="position:relative; margin-left: 120px; margin-right: 120px; z-index: 0;">
+  <div class="row">
+    @if (showConfirmMessage) {
+    <div class="confirmation-overlay">
+      <ngb-alert type="warning" [dismissible]="false" class="confirmation-message">
+        <button type="button" class="close-button" (click)="closeConfirmation()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <p>El vestido se ha eliminado correctamente</p>
+        <div style="text-align: center;">
+          <i class="bi bi-check-lg" style="font-size: 3em;"></i>
         </div>
+        <p>Para cualquier duda contacte con soporte&commat;GelimNovias.com</p>
+      </ngb-alert>
+    </div>
 
 
-      }   
-  
-      <div class="col-16">
-        
-        <h4 class="mb-2 mt-5" style="text-align: center;">Listado de Reservas</h4>
-        <br>
-        <table class="table ">
-  
-          <thead>
-  
-              <tr>
-                <th scope="col" style="color: #eb7abb"><i class="bi bi-hourglass" style="margin-right: 7px;"></i>Foto</th>
-              <th scope="col" style="color: #eb7abb" ><i class="bi bi-calendar-day" style="margin-right: 7px;"></i>Fecha</th>
-              <!-- <th scope="col">Fecha de salida</th> -->
-              <th scope="col" style="color: #eb7abb"><i class="bi bi-hourglass" style="margin-right: 7px;"></i>Hora</th>
-              <th scope="col" style="color: #eb7abb"><i class="bi bi-geo-alt-fill" style="margin-right: 7px;"></i>Comentarios</th>
-              <th scope="col" style="text-align: right; color: #eb7abb">Acciones</th>
-              <th scope="col"></th>
-              <th scope="col"></th>
-  
-              </tr>
-              <br>
-                </thead>
-                
-                <tbody>
-                  @for (booking of bookings; track booking.id) {
-                  <tr>
-                    <td>
-                      <td>
-                        <td>
-                          <img 
-                            [src]="booking.vestidos?.photoUrl || booking.vestidoFiesta?.photoUrl" 
-                            alt="Imagen del vestido" 
-                            style="width: 100px; height: auto;">
-                        </td>
-                        
-                    
-                    <td>{{booking.date}}</td>
-                    <td>{{booking.time}}</td>
-                    <td>{{booking.comment}}</td>
-  
-       
-  
-                    <td>
-                      <button id="detalle" type="button" class="btn btn-outline1 w-100 me-2 "
-                      [routerLink]="['/booking', booking.id, 'detail']">
-                      <i class="bi bi-eye"></i>
-                      Detalle</button>
-                      <td>
-                      <button id="Borrar" class="btn btn-outline2 w-100  " 
-                      (click)="openModal(content, booking)">Eliminar</button>
-                    </td>
-                  </tr>
-                   }
-  
-              </tbody>      
-  
-            </table>
-          </div>
-      </div>
+    }
+
+    <div class="col-16">
+
+      <h4 class="mb-2 mt-5" style="text-align: center;">Listado de Reservas</h4>
+      <br>
+      <table class="table ">
+
+        <thead>
+
+          <tr>
+            <th scope="col" style="color: #eb7abb"><i class="bi bi-hourglass" style="margin-right: 7px;"></i>Foto</th>
+            <th scope="col" style="color: #eb7abb"><i class="bi bi-calendar-day" style="margin-right: 7px;"></i>Fecha
+            </th>
+            <!-- <th scope="col">Fecha de salida</th> -->
+            <th scope="col" style="color: #eb7abb"><i class="bi bi-hourglass" style="margin-right: 7px;"></i>Hora</th>
+            <th scope="col" style="color: #eb7abb"><i class="bi bi-geo-alt-fill"
+                style="margin-right: 7px;"></i>Comentarios</th>
+                <th></th>
+            <th scope="col" style="text-align: right; color: #eb7abb">Acciones</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+
+          </tr>
+          <br>
+        </thead>
+
+        <tbody>
+          @for (booking of bookings; track booking.id) {
+          <tr>
+           
+            <td>
+              <img 
+                [src]="(booking.vestidos?.photoUrl || booking.vestidoFiesta?.photoUrl) ? (baseUrl + (booking.vestidos?.photoUrl || booking.vestidoFiesta?.photoUrl)) : 'ruta/default.jpg'" 
+                alt="Imagen del vestido"
+                style="width: 100px; height: auto;"
+              >
+            </td>
+            
+
+            <td>{{booking.date}}</td>
+            <td>{{booking.time}}</td>
+            <td>{{booking.comment}}</td>
+            <td></td>
+            <td>
+              <button id="detalle" type="button" class="btn btn-outline1 w-100 me-2 "
+                [routerLink]="['/booking', booking.id, 'detail']">
+                <i class="bi bi-eye"></i>
+                Detalle</button>
+            <td>
+              <button id="Borrar" class="btn btn-outline2 w-100  "
+                (click)="openModal(content, booking)">Eliminar</button>
+            </td>
+          </tr>
+          }
+
+        </tbody>
+
+      </table>
+    </div>
   </div>
-  <ng-template #content let-modal>
-    <div class="modal-header">
-      <h4 class="modal-title">¿Desea eliminar esta reserva?</h4>
-      <button type="button" class="btn-close" aria-label="Cancelar" (click)="modal.dismiss('Cancelar')"></button>
-    </div>
-    <div class="modal-body">
-      <p>Para continuar pulse aceptar</p>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline1" (click)="modal.close('Aceptar')">Aceptar</button>
-      <button type="button" class="btn btn-outline2" (click)="modal.close('Cancelar')">Cancelar</button>
-    </div>
-  </ng-template>
+</div>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">¿Desea eliminar esta reserva?</h4>
+    <button type="button" class="btn-close" aria-label="Cancelar" (click)="modal.dismiss('Cancelar')"></button>
+  </div>
+  <div class="modal-body">
+    <p>Para continuar pulse aceptar</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline1" (click)="modal.close('Aceptar')">Aceptar</button>
+    <button type="button" class="btn btn-outline2" (click)="modal.close('Cancelar')">Cancelar</button>
+  </div>
+</ng-template>

@@ -11,6 +11,7 @@ export interface Booking{
     time?: Time;
    
     comment?: string;
+    photoUrl?: string,
 
     vestidos?: Vestido;
     vestidoFiesta?: VestidoFiesta;
