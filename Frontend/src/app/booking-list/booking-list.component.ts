@@ -45,11 +45,19 @@ export class BookingListComponent implements OnInit{
     } 
   ngOnInit(): void {
     this.loadBookings();
+    
   }
   loadBookings(): void {
     this.httpClient.get<Booking[]>('http://localhost:3000/booking/filter-by-current-user')
     .subscribe(bookings => this.bookings = bookings);
+    
+    /* this.httpClient.get<Booking[]>('http://localhost:3000/booking/filter-by-photoUrl')
+    .subscribe(bookings => this.bookings = bookings); */
   }
+  getPhotoUrl(booking: Booking): string {
+    return booking.vestidos?.photoUrl || booking.vestidoFiesta?.photoUrl || '';
+  }
+  
 
   deleteById(booking: Booking) {
     

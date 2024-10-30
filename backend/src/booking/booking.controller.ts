@@ -17,15 +17,19 @@ export class BookingController {
     }
 
   
-    /*   @Get(':id')
-    findById(@Param('id', ParseIntPipe) id: number){
-        return this.bookingRepository.findOne({
+ /*    @Get('filter-by-photoUrl')
+    findByPhotoUrl(@Param('id', ParseIntPipe) id: string) {
+        return this.bookingRepository.find({
             where: {
-                id: id
+                vestidos :{
+                    photoUrl: id
+                }
+               
             }
         });
-    }  */  
-        @Get('filter-by-id/:id')
+    } */
+
+    @Get('filter-by-id/:id')
         findById(@Param('id', ParseIntPipe) id :number){
             return this.bookingRepository.findOne({
                 where: {
@@ -45,19 +49,21 @@ export class BookingController {
         });
     }
 
-    @Get('filter-by-category/:id')
-    findByCategoryId(@Param('id', ParseIntPipe) id: number){
-        return this.bookingRepository.find({
-            where: {
-                category: {
-                    id: id
-                }
-            }
-        });
-    }
+   
 
     @Get('filter-by-vestidos/:id')
    findByVestidosId(@Param('id', ParseIntPipe) id: number){
+    return this.bookingRepository.find({
+        where: {
+            user: {
+                id: id
+            }
+        }
+    });
+   }
+   
+   @Get('filter-by-vestidosFiesta/:id')
+   findByVestidosFiestaId(@Param('id', ParseIntPipe) id: number){
     return this.bookingRepository.find({
         where: {
             user: {

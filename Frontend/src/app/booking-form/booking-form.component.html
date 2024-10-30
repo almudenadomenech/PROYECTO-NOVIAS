@@ -57,11 +57,17 @@
     <!-- Contenedor para la imagen (columna derecha) -->
     <div class="col-lg-4 d-flex align-items-center justify-content-center">
       @if(vestido && vestido.photoUrl){
-      <a>
-        <img class="bd-placeholder-img card-img-top highlight-on-hover" [src]="baseUrl + vestido.photoUrl" 
-          alt="Imagen" style="max-width: 100%; height: auto;">
-      </a>
-      }
+        <a>
+          <img class="bd-placeholder-img card-img-top highlight-on-hover" [src]="baseUrl + vestido.photoUrl" 
+            alt="Imagen" style="max-width: 100%; height: auto;">
+        </a>
+      } @else if (vestidoFiesta && vestidoFiesta.photoUrl) {
+        <a>
+            <img class="bd-placeholder-img card-img-top highlight-on-hover" [src]="baseUrl + vestidoFiesta.photoUrl" 
+                alt="Imagen" style="max-width: 100%; height: auto;">
+        </a>
+    }
+    
     </div>
-  </div>
+    
 </div>
