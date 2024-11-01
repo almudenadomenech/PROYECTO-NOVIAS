@@ -1,5 +1,5 @@
-<div style="position: relative; top: -150px;  width: 100%; height: 100px; z-index: -1; ">
-  <img class="img-fluid" src="/assets/img/booking-list.jpg">
+<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+  <img src="/assets/img/Rosas.jpg" alt="Fondo de tabla" style="width: 100%; height: auto; opacity: 0.3;">
 </div>
 
 <div class="card mt-5 px-4 rosa-border" style="position:relative; margin-left: 120px; margin-right: 120px; z-index: 0;">
@@ -23,22 +23,26 @@
 
     <div class="col-16">
 
-      <h4 class="mb-2 mt-5" style="text-align: center;">Listado de Reservas</h4>
+      <h3 class="mb-2 mt-5" style="text-align: center;">Listado de Reservas</h3>
       <br>
       <table class="table ">
 
         <thead>
 
           <tr>
-            <th scope="col" style="color: #eb7abb"><i class="bi bi-hourglass" style="margin-right: 7px;"></i>Foto</th>
-            <th scope="col" style="color: #eb7abb"><i class="bi bi-calendar-day" style="margin-right: 7px;"></i>Fecha
+            <th scope="col" style="color: #eb7abb; font-size: 20px; display: flex; align-items: center;">
+              <i class="bi bi-hourglass" style="margin-right: 7px;"></i>Foto
+            </th>
+            <th scope="col" style="color: #eb7abb; font-size: 20px;"><i class="bi bi-calendar-day" style="margin-right: 7px;"></i>Fecha
             </th>
             <!-- <th scope="col">Fecha de salida</th> -->
-            <th scope="col" style="color: #eb7abb"><i class="bi bi-hourglass" style="margin-right: 7px;"></i>Hora</th>
-            <th scope="col" style="color: #eb7abb"><i class="bi bi-geo-alt-fill"
+            <th scope="col" style="color: #eb7abb; font-size: 20px"><i class="bi bi-hourglass" style="margin-right: 7px;"></i>Hora</th>
+            <th scope="col" style="color: #eb7abb; font-size: 20px"><i class="bi bi-geo-alt-fill"
                 style="margin-right: 7px;"></i>Comentarios</th>
                 <th></th>
-            <th scope="col" style="text-align: right; color: #eb7abb">Acciones</th>
+                
+                <th scope="col" style="text-align: left; padding-left: 85px; color: #eb7abb; font-size: 20px">Acciones</th>
+
             <th scope="col"></th>
             <th scope="col"></th>
 
@@ -59,16 +63,17 @@
             </td>
             
 
-            <td>{{booking.date}}</td>
-            <td>{{booking.time}}</td>
-            <td>{{booking.comment}}</td>
+            <td style="vertical-align: middle;">{{booking.date}}</td>
+            <td style="vertical-align: middle;">{{booking.time}}</td>
+            <td style="vertical-align: middle;">{{booking.comment}}</td>
             <td></td>
-            <td>
+            <td class="flex-center"> 
+              <!-- style="border: none;" -->
               <button id="detalle" type="button" class="btn btn-outline1 w-100 me-2 "
-                [routerLink]="['/booking', booking.id, 'detail']">
+                [routerLink]="['/booking', booking.id, 'detail']" >
                 <i class="bi bi-eye"></i>
                 Detalle</button>
-            <td>
+            <td class="flex-center">
               <button id="Borrar" class="btn btn-outline2 w-100  "
                 (click)="openModal(content, booking)">Eliminar</button>
             </td>

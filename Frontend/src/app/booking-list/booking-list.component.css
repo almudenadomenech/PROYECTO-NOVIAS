@@ -86,3 +86,14 @@ font-size: 25px;
 .rosa-border {
   border: 2px solid #eb7abb;
 }
+
+.text-center {
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

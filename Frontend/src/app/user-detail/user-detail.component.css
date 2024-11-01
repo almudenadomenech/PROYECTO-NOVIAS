@@ -10,7 +10,7 @@
    
 }
 .card-shadow{
-    border: 2px solid #ffffff; /* Cambia #ff0000 por el color que desees */
+    border: none; /* Cambia #ff0000 por el color que desees */
     width: 100%; /* Ajusta esto según el tamaño deseado */
     /* height: 350px; */
    
