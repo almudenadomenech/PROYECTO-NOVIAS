@@ -62,7 +62,7 @@ ngb-rating{
  
   .custom-badge {
     font-size: 20px; /* Cambia el tamaño de la fuente */
-    color:  #000000; /* Cambia el color del texto */
+    color: #8b65ec; /* Cambia el color del texto */
     background-color: #f2e6ff; /* Cambia el color de fondo */
     padding: 15px; /* Añade espacio interno */
     border-radius: 5px; /* Redondea las esquinas */
@@ -73,8 +73,8 @@ ngb-rating{
 
 /* Ejemplo de pseudo-clases */
 .custom-badge:hover {
-    background-color:  #eb7abb; /* Cambia el color de fondo al pasar el ratón por encima */
-    color:  #000000;
+    background-color:  #b5a6da; /* Cambia el color de fondo al pasar el ratón por encima */
+    color:  #8b65ec;
 }
 
 .card{
@@ -128,6 +128,6 @@ border-radius: 8px; /* Ajusta el border-radius para hacer las esquinas redondead
 font-size: 25px;
 }
 .silueta{
-  color: #000000;
+  color: #8b65ec;
   font-size: 45px;
 }
