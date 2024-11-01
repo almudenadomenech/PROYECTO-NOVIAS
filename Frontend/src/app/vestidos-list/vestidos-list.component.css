@@ -62,8 +62,8 @@ box-shadow: 0 0 20px rgba(230, 226, 226, 0.5), 0.9; /* Aumenta la sombra */
 
 .custom-badge {
   font-size: 20px; /* Cambia el tamaño de la fuente */
-  color:  #ffffff; /* Cambia el color del texto */
-  background-color:  #000000; /* Cambia el color de fondo */
+  color:  #000000; /* Cambia el color del texto */
+  background-color:  #f2e6ff; /* Cambia el color de fondo */
   padding: 15px; /* Añade espacio interno */
   border-radius: 5px; /* Redondea las esquinas */
   text-decoration: none; /* Elimina la subrayado */
@@ -94,13 +94,13 @@ z-index: 1050; /* Asegura que el mensaje esté por encima de otros elementos */
 }
 
 .confirmation-message {
-background-color:#000000;
+background-color:#f2e6ff;
 padding: 20px;
 border-radius: 8px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+box-shadow: 0 4px 8px #f2e6ff;
 text-align: center;
-color: #eb7abb;
-border: 1px solid #eb7abb;
+color: #000000;
+border: 1px solid #000000;
 
 }
 .close-button {
@@ -128,6 +128,6 @@ border-radius: 8px; /* Ajusta el border-radius para hacer las esquinas redondead
 font-size: 25px;
 }
 .silueta{
-color: #eb7abb;
+color: #000000;
 font-size: 45px;
 }

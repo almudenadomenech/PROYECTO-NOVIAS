@@ -2,7 +2,7 @@
   <img src="/assets/img/Rosas.jpg" alt="Fondo de tabla" style="width: 100%; height: auto; opacity: 0.3;">
 </div>
 
-<div class="card mt-5 px-4 rosa-border" style="position:relative; margin-left: 120px; margin-right: 120px; z-index: 0;">
+<div class="card mt-5 px-4 rosa-border" style="position:relative; margin-left: 120px; margin-right: 120px; z-index: 0; background-color: #f2e6ff;">
   <div class="row">
     @if (showConfirmMessage) {
     <div class="confirmation-overlay">
@@ -21,30 +21,29 @@
 
     }
 
-    <div class="col-16">
+    <div class="col-16" style="background-color: transparent;" >
 
       <h3 class="mb-2 mt-5" style="text-align: center;">Listado de Reservas</h3>
       <br>
-      <table class="table ">
+      <table class="table">
 
-        <thead>
+        <thead >
 
           <tr>
-            <th scope="col" style="color: #eb7abb; font-size: 20px; display: flex; align-items: center;">
+            <th scope="col" style="color: #eb7abb; font-size: 20px; display: flex; align-items: center; background-color: transparent;">
               <i class="bi bi-hourglass" style="margin-right: 7px;"></i>Foto
             </th>
-            <th scope="col" style="color: #eb7abb; font-size: 20px;"><i class="bi bi-calendar-day" style="margin-right: 7px;"></i>Fecha
+            <th scope="col" style="color: #eb7abb; font-size: 20px; background-color: transparent;"><i class="bi bi-calendar-day" style="margin-right: 7px;"></i>Fecha
             </th>
             <!-- <th scope="col">Fecha de salida</th> -->
-            <th scope="col" style="color: #eb7abb; font-size: 20px"><i class="bi bi-hourglass" style="margin-right: 7px;"></i>Hora</th>
-            <th scope="col" style="color: #eb7abb; font-size: 20px"><i class="bi bi-geo-alt-fill"
+            <th scope="col" style="color: #eb7abb; font-size: 20px; background-color: transparent;"><i class="bi bi-hourglass" style="margin-right: 7px;"></i>Hora</th>
+            <th scope="col" style="color: #eb7abb; font-size: 20px;background-color: transparent;"><i class="bi bi-geo-alt-fill"
                 style="margin-right: 7px;"></i>Comentarios</th>
-                <th></th>
+                <th style="background-color: transparent;"></th>
                 
-                <th scope="col" style="text-align: left; padding-left: 85px; color: #eb7abb; font-size: 20px">Acciones</th>
+                <th scope="col" style="text-align: left; padding-left: 85px; color: #eb7abb; font-size: 20px; background-color: transparent">Acciones</th>
 
-            <th scope="col"></th>
-            <th scope="col"></th>
+            
 
           </tr>
           <br>
@@ -54,26 +53,25 @@
           @for (booking of bookings; track booking.id) {
           <tr>
            
-            <td>
+            <td style="background-color: transparent;">
               <img 
                 [src]="(booking.vestidos?.photoUrl || booking.vestidoFiesta?.photoUrl) ? (baseUrl + (booking.vestidos?.photoUrl || booking.vestidoFiesta?.photoUrl)) : 'ruta/default.jpg'" 
                 alt="Imagen del vestido"
-                style="width: 100px; height: auto;"
-              >
+                 style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%;">
             </td>
             
 
-            <td style="vertical-align: middle;">{{booking.date}}</td>
-            <td style="vertical-align: middle;">{{booking.time}}</td>
-            <td style="vertical-align: middle;">{{booking.comment}}</td>
-            <td></td>
-            <td class="flex-center"> 
+            <td style="vertical-align: middle; background-color: transparent;">{{booking.date}}</td>
+            <td style="vertical-align: middle; background-color: transparent;">{{booking.time}}</td>
+            <td style="vertical-align: middle;  background-color: transparent;">{{booking.comment}}</td>
+            <td style="background-color: transparent;"></td>
+            <td class="flex-center"style="background-color: transparent;"> 
               <!-- style="border: none;" -->
               <button id="detalle" type="button" class="btn btn-outline1 w-100 me-2 "
                 [routerLink]="['/booking', booking.id, 'detail']" >
                 <i class="bi bi-eye"></i>
                 Detalle</button>
-            <td class="flex-center">
+            <td class="flex-center"style="background-color: transparent;">
               <button id="Borrar" class="btn btn-outline2 w-100  "
                 (click)="openModal(content, booking)">Eliminar</button>
             </td>

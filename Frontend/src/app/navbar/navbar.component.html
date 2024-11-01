@@ -1,17 +1,17 @@
-<nav class="navbar navbar-expand-lg bg-black navbar-custom">
+<nav class="navbar navbar-expand-lg  navbar-custom" style="background-color: #f2e6ff;">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="#">
-			<img src="/assets/img/Logo.png" alt="Logo Gelim Novias">
-
+			<img src="/assets/img/Logo2.png" alt="Logo Gelim Novias">
+			<!-- <h3>Gelim Novias </h3> -->
 		</a>
-		<h3>Gelim Novias </h3>
+		
 		
 		<button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed"
 			aria-label="Toggle navigation" (click)="collapsed = !collapsed">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
-		<div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+		<div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent" style="background-color: #f2e6ff;">
 			<ul class="navbar-nav ms-auto ">
 
 				<li class="nav-item">
@@ -25,15 +25,15 @@
 				<li class="nav-item" ngbDropdown>
 					<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown2" role="button"> Añadir y
 						modificar </a>
-					<div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
+					<div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end" style="background-color: #f2e6ff;">
 						<a ngbDropdownItem routerLink="/vestidos" (click)="$event.preventDefault()"
-							style="background-color: #000000;">Vestidos de Novia</a>
+							style="background-color: #f2e6ff;">Vestidos de Novia</a>
 						<a ngbDropdownItem routerLink="/vestidos/create" (click)="$event.preventDefault()"
-							style="background-color: #000000;">Añadir vestidos de Novia</a>
+							style="background-color: #f2e6ff;">Añadir vestidos de Novia</a>
 							<a ngbDropdownItem routerLink="/vestidos-fiesta" (click)="$event.preventDefault()"
-							style="background-color: #000000;">Vestidos de Fiesta</a>
+							style="background-color: #f2e6ff;">Vestidos de Fiesta</a>
 						<a ngbDropdownItem routerLink="/vestidos-fiesta/create" (click)="$event.preventDefault()"
-							style="background-color: #000000;">Añadir vestidos de Fiesta</a>
+							style="background-color:#f2e6ff;">Añadir vestidos de Fiesta</a>
 
 
 
@@ -44,10 +44,10 @@
 				<li class="nav-item" ngbDropdown display="dynamic" placement="bottom-end">
 					<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button"> Reservas
 					</a>
-					<div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
+					<div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu" style="background-color: #f2e6ff;">
 						
 							<a ngbDropdownItem routerLink="/booking" (click)="$event.preventDefault()"
-							style="background-color: #000000;">Listado de
+							style="background-color:#f2e6ff;">Listado de
 							Reservas</a>
 					</div>
 					
@@ -59,9 +59,9 @@
 				@if (isAdmin) {
 				<li class="nav-item" ngbDropdown display="dynamic" placement="bottom-end">
 					<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button"> Usuarios </a>
-					<div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
+					<div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu" style="background-color: #f2e6ff;">
 						<a ngbDropdownItem routerLink="/user" (click)="$event.preventDefault()"
-							style="background-color: #000000;">Lista de usuarios</a>
+							style="background-color: #f2e6ff;">Lista de usuarios</a>
 
 					</div>
 				</li>
@@ -74,12 +74,12 @@
 				<li class="nav-item" ngbDropdown display="dynamic" placement="bottom-end">
 					<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3"
 						role="button">{{userEmail.split('@')[0]}}</a>
-					<div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
+					<div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu" style="background-color: #f2e6ff;">
 						<a ngbDropdownItem routerLink="/account" (click)="$event.preventDefault()"
-							style="background-color: #000000;">
+							style="background-color: #f2e6ff;">
 							Editar Perfil
 						</a>
-						<a ngbDropdownItem (click)="logout();" style="cursor: pointer;background-color: #000000;">
+						<a ngbDropdownItem (click)="logout();" style="cursor: pointer;background-color: #f2e6ff;">
 							Cerrar Sesión
 						</a>
 

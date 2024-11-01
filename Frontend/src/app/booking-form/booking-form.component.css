@@ -8,7 +8,7 @@ h4{
 }
 
 .btn1, .btn2{
-    font-size: 20px; /* Cambia el tamaño de la fuente */
+    font-size: 16px; /* Cambia el tamaño de la fuente */
     color:  #ffffff; /* Cambia el color del texto */
     background-color:  #000000; /* Cambia el color de fondo */
     padding: 15px; /* Añade espacio interno */
@@ -44,13 +44,13 @@ h4{
 }
 
 .confirmation-message {
-    background-color:#000000;
+    background-color:#e1d5ee;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px #f2e6ff;
     text-align: center;
-    color: #eb7abb;
-    border: 1px solid #eb7abb;
+    color: #000000;
+    border: 1px solid #000000;
     
 }
 .close-button {

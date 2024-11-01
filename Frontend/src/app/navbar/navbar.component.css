@@ -10,16 +10,16 @@
 .navbar-custom .nav-link,
 .navbar-custom .btn,
 .navbar-custom .dropdown-menu a {
-    color: #eb7abb !important;
+    color: #000000 !important;
 }
 
 .navbar-custom .dropdown-menu {
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     border: none;
 }
 
 .navbar-custom .dropdown-menu a:hover {
-    background-color: rgb(0, 0, 0);
+    background-color: #f2e6ff;
 }
 
 
@@ -30,7 +30,7 @@
     margin-top: 5px;
   }
 h3{
-    color:#eb7abb
+    color:#000000
 }
 
 .img-thumbnail {
