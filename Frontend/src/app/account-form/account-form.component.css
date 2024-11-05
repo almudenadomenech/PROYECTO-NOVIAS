@@ -5,7 +5,7 @@
   .btn1, .btn2, .btn3, .btn4{
     font-size: 20px; /* Cambia el tamaño de la fuente */
     color:  #ffffff; /* Cambia el color del texto */
-    background-color:  #000000; /* Cambia el color de fondo */
+    background-color:  rgb(76, 75, 75); /* Cambia el color de fondo */
     padding: 15px; /* Añade espacio interno */
     border-radius: 5px; /* Redondea las esquinas */
     text-decoration: none; /* Elimina la subrayado */
@@ -13,7 +13,7 @@
    
 }
 .btn1:hover, .btn3:hover, .btn4:hover{
-    background-color:  #eb7abb; /* Cambia el color de fondo al pasar el ratón por encima */
+    background-color:   #eb7abb; /* Cambia el color de fondo al pasar el ratón por encima */
     color:  #000000;
 }
 

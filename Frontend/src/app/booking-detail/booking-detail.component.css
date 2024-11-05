@@ -3,8 +3,8 @@
     background-color: rgb(60, 56, 56);
 }
 .btn-outline:hover {
-    color: #ffffff;
-    background-color: #080808;
+    color: #030303;
+    background-color: #eb7abb;
 }
 .rosa-border {
     border: 2px solid #eb7abb;

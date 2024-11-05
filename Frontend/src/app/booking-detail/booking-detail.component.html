@@ -2,11 +2,11 @@
   <img src="/assets/img/Rosas.jpg" alt="Fondo de tabla" style="width: 100%; height: auto; opacity: 0.3;">
 </div>
   
-  <div class="card mt-1 px-4 rosa-border" style="position:relative; margin-left: 120px; margin-right: 120px; z-index: 0;">
+  <div class="card mt-1 px-4 rosa-border" style="position:relative; margin-left: 120px; margin-right: 120px; z-index: 0; background-color: #f2e6ff;">
     <div class="row">
         <div class="col-12">
           
-          <h4 class="mt-5" style="text-align: center;">Detalle de la reserva </h4>
+          <h4 class="mt-5" style="text-align: center; color:#eb7abb">Detalle de la reserva </h4>
         </div>
         <div class="col-12">
   
@@ -16,19 +16,19 @@
                     <tr>
                       
                       <!-- <th scope="col">Dirección</th> -->
-                      <th scope="col" style="color: #eb7abb"><i class="bi bi-upc"></i>Identificador</th>
-                      <th scope="col" style="color: #eb7abb"><i class="bi bi-calendar2-week-fill" style=" margin-right: 7px;"></i>Fecha</th>                  
-                      <th scope="col" style= "color:#eb7abb"><i class="bi bi-hourglass-split" style=" margin-right: 7px;"></i>Hora</th>
+                      <th scope="col" style="color: #eb7abb; background-color: transparent;"><i class="bi bi-upc"></i>Identificador</th>
+                      <th scope="col" style="color: #eb7abb; background-color: transparent;"><i class="bi bi-calendar2-week-fill" style=" margin-right: 7px;"></i>Fecha</th>                  
+                      <th scope="col" style= "color:#eb7abb; background-color: transparent;"><i class="bi bi-hourglass-split" style=" margin-right: 7px;"></i>Hora</th>
                     </tr>
                     
                   </thead>
                   <tbody>
                     <tr>
   
-                      <td style="padding-left: 70px;">{{booking.id}}</td>
-                      <td>{{booking.date}}</td>
-                      <td>{{booking.time}}</td>
-                      <td>{{booking.comment}}</td>
+                      <td style="padding-left: 70px; background-color: transparent;">{{booking.id}}</td>
+                      <td style="background-color: transparent;">{{booking.date}}</td>
+                      <td style="background-color: transparent;">{{booking.time}}</td>
+                      <td style="background-color: transparent;">{{booking.comment}}</td>
                       
                     </tr>
                   <br>
@@ -40,6 +40,6 @@
                 <p>Reserva no encontrada.</p>
                 }
             </div>
-            <button type="button" class="btn btn-outline w-25 mb-4" routerLink="/booking" style="margin-left: 800px;">Volver</button>
+            <button type="button" class="btn btn-outline w-25 mb-4" routerLink="/booking">Volver</button>
         </div>
       </div>    

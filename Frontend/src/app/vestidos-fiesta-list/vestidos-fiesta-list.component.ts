@@ -38,7 +38,8 @@ export class VestidosFiestaListComponent implements OnInit {
 
   openModal(content: TemplateRef<any>, vestidoFiesta: VestidoFiesta){
     const modalRef = this.modalService.open(content, {
-      centered: true
+      centered: true,
+      
     });
     modalRef.result.then(result => {
       if(result === 'Aceptar'){
