@@ -21,9 +21,8 @@ export class UserDetailComponent implements OnInit {
   constructor(
     private httpClient: HttpClient,
     private activatedRoute: ActivatedRoute,
-  
-    private imageService: ImageService 
-  ){
+    private imageService: ImageService )
+    {
     this.baseUrl = this.imageService.getBaseUrl();
   }
   ngOnInit(): void {
