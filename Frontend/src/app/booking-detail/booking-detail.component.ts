@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Booking } from '../interfaces/booking.model';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { ImageService } from '../shared/image.service';
 
 @Component({
   selector: 'app-booking-detail',
@@ -13,10 +14,15 @@ import { HttpClient } from '@angular/common/http';
 export class BookingDetailComponent implements OnInit{
 
   booking: Booking | undefined;
+  baseUrl: string;
 
-  constructor (private activatedRoute: ActivatedRoute,
-    private httpClient: HttpClient)
-{}  
+  constructor(
+    private httpClient: HttpClient,
+    private activatedRoute: ActivatedRoute,
+    private imageService: ImageService)
+    {
+    this.baseUrl = this.imageService.getBaseUrl();
+  }
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
       let id = params['id'];

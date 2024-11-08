@@ -1,8 +1,8 @@
-<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
-  <img src="/assets/img/Rosas.jpg" alt="Fondo de tabla" style="width: 100%; height: auto; opacity: 0.3;">
+<!-- <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1;">
+  <img src="/assets/img/Rosas.jpg" alt="Fondo de tabla" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.3;">
 </div>
   
-  <div class="card mt-1 px-4 rosa-border" style="position:relative; margin-left: 120px; margin-right: 120px; z-index: 0; background-color: #f2e6ff;">
+  <div class="card mt-5 px-4 rosa-border" style="position:relative; margin-left: 120px; margin-right: 120px; z-index: 0; background-color: #f2e6ff;">
     <div class="row">
         <div class="col-12">
           
@@ -15,7 +15,7 @@
               <thead>
                     <tr>
                       
-                      <!-- <th scope="col">Dirección</th> -->
+                     
                       <th scope="col" style="color: #eb7abb; background-color: transparent;"><i class="bi bi-upc"></i>Identificador</th>
                       <th scope="col" style="color: #eb7abb; background-color: transparent;"><i class="bi bi-calendar2-week-fill" style=" margin-right: 7px;"></i>Fecha</th>                  
                       <th scope="col" style= "color:#eb7abb; background-color: transparent;"><i class="bi bi-hourglass-split" style=" margin-right: 7px;"></i>Hora</th>
@@ -43,3 +43,64 @@
             <button type="button" class="btn btn-outline w-25 mb-4" routerLink="/booking">Volver</button>
         </div>
       </div>    
+ -->
+
+ <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+  <img src="/assets/img/Rosas.jpg" alt="Fondo de tabla" style="width: 100%; height: auto; opacity: 0.3;">
+</div>
+<div class="container position-relative" style="z-index: 1; background: transparent;">
+    <div class="row">
+      <div class="col-14 mt-5">
+  
+  
+        <div class="row row-cols-3 row-cols-sm-2 row-cols-md-2">
+          <div class="col">
+              <div class="card-shadow">
+                @if(booking && booking.photoUrl){
+                  <a >
+                    
+                    <img class="bd-placeholder-img card-img-top 
+                    highlight-on-hover" [src]="baseUrl + booking.photoUrl" 
+                    alt="Imagen" class="img-thumbnail">
+                    
+                  </a>
+                }
+               
+             </div>
+    
+            
+          </div>
+          @if (booking) { 
+          <div class="detalles">
+            <div class="nombre">
+              <h1 class="mb-2 mt-1" style="text-align: center; color: #eb7abb">Detalles</h1>
+            </div>
+           
+            <div class="description mt-5">
+              <i class="bi bi-upc custom-icon" style="color: #eb7abb;">
+                <span style="margin-left: 15px; color:black">{{booking.id}}</span> 
+              </i>
+              <br>
+              <br>
+              <i class="bi bi-calendar-day custom-icon" style="color: #eb7abb;" >
+                <span style="margin-left: 15px; color:black">{{booking.date}}</span> 
+              </i>
+              <br>
+              <br>
+              <i class="bi bi-calendar2-week-fill custom-icon" style="color: #eb7abb;" >
+                <span style="margin-left: 15px; color:black">{{booking.time}}</span>
+
+              </i>
+              
+            </div>
+           
+          </div>
+        }
+        </div>
+      
+      </div>
+      <button class="btn1 w-25 py-2 mb-3 mt-3" routerLink="/booking" type="submit">Volver</button>
+    </div>
+  </div> 
+  
+  
