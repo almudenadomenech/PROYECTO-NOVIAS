@@ -1,5 +1,6 @@
 .body{
     font-family:  "Playwrite FR Trad", cursive;
+   
 }
 
 
@@ -11,6 +12,7 @@
 .navbar-custom .btn,
 .navbar-custom .dropdown-menu a {
     color: #000000 !important;
+    font-size: 20px;
 }
 
 .navbar-custom .dropdown-menu {

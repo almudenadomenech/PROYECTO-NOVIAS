@@ -16,11 +16,13 @@ ngb-rating{
   .btn-outline1 {
     color: #ffffff;
     background-color: rgb(58, 60, 56);
+    
 }
 
 .btn-outline1:hover {
     color: #ffffff;
     background-color: #080808;
+    
 }
 
 .btn-outline2 {
@@ -62,19 +64,20 @@ ngb-rating{
  
   .custom-badge {
     font-size: 20px; /* Cambia el tamaño de la fuente */
-    color: #8b65ec; /* Cambia el color del texto */
-    background-color: #f2e6ff; /* Cambia el color de fondo */
+    color: #000000; /* Cambia el color del texto */
+   
     padding: 15px; /* Añade espacio interno */
     border-radius: 5px; /* Redondea las esquinas */
     text-decoration: none; /* Elimina la subrayado */
     display: inline-block; /* Asegura que se comporta como un bloque en línea */
     margin: 5px; /* Añade espacio alrededor del elemento */
+  
 }
 
 /* Ejemplo de pseudo-clases */
 .custom-badge:hover {
-    background-color:  #b5a6da; /* Cambia el color de fondo al pasar el ratón por encima */
-    color:  #8b65ec;
+    
+    color:  #000000;
 }
 
 .card{
@@ -128,7 +131,7 @@ border-radius: 8px; /* Ajusta el border-radius para hacer las esquinas redondead
 font-size: 25px;
 }
 .silueta{
-  color: #8b65ec;
+  color: #000000;
   font-size: 45px;
 }
 

@@ -15,11 +15,11 @@ h4{
   }
   .reservar{
     margin-top: 45px;
-    background-color: #b5a6da;
+    background-color: #000000;
     width: 200px;
     height: 50px;
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
    border-radius: 15px;
   }
   .reservar:hover{
