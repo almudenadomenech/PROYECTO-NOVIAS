@@ -3,13 +3,13 @@
     padding: 1rem;
   }
   .btn-outline-negro {
-    color: #000000;
-    background-color: #eb7abb;
+    color: #ffffff;
+    background-color: #000000;
   }
   
   .btn-outline-negro:hover {
-    color: #ffffff;
-    background-color: #111111;
+    color: #000000;
+    background-color: #eee774;
   }
   .my-center {
     display: flex;
@@ -20,4 +20,9 @@
   .mover-arriba {
     position: relative;
     top: -40px; /* Ajusta este valor según sea necesario */
+}
+h4{
+  text-align: center;
+  margin-bottom: 55px;
+  font-size: 45px;
 }
