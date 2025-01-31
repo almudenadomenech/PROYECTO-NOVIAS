@@ -1,3 +1,6 @@
+.rosa-border {
+  border: 2px solid #c7c48f;
+}
 
 .btn1-outline {
     color: #ffffff;
@@ -6,7 +9,7 @@
   
   .btn1-outline:hover {
     color: #000000;
-    background-color: #eb7abb;
+    background-color: #c7c48f;
   }
   .btn2-outline {
     color: #ffffff;
@@ -24,11 +27,9 @@
   
   .btn3-outline:hover {
     color: #070707;
-    background-color: #eb7abb;
+    background-color: #c7c48f;
   }
-  .rosa-border {
-    border: 2px solid #eb7abb;
-  }
+ 
 
   .confirmation-overlay {
     position: fixed;
@@ -68,7 +69,7 @@
 .close-button span {
  
   color: #ffffff;
-  background-color: #eb7abb; /* Color de fondo del botón */
+  background-color: #c7c48f; /* Color de fondo del botón */
   border: none; /* Elimina el borde del botón */
   padding: 5px 10px; /* Ajusta el padding para hacer el botón más cuadrado */
   border-radius: 8px; /* Ajusta el border-radius para hacer las esquinas redondeadas */

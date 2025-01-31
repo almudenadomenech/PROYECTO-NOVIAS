@@ -1,12 +1,12 @@
-<div style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1;">
-    <img src="/assets/img/Rosas.jpg" alt="Fondo de tabla" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.3;">
+<div style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1; background: radial-gradient(rgb(238, 238, 218), rgb(238, 238, 232));">
+    <!-- <img src="/assets/img/Rosas.jpg" alt="Fondo de tabla" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.3;"> -->
 </div>
-<div class="card mt-5 px-4 rosa-border" style="position:relative; margin-left: 120px; margin-right: 120px; background-color: #f9f4ff;">
+<div class="card mt-5 px-4 rosa-border" style="position:relative; margin-left: 120px; margin-right: 120px; background-color:#e6e4d0;">
     <div class="row">
         <div class="col">
 
 
-            <h4 class="mt-3" style="color:  #eb7abb; text-align: center;">Mi perfil</h4>
+            <h4 class="mt-3" style="color: #000000; text-align: center;">Mi perfil</h4>
             <div class="text-center mt-3">
                 @if (user?.photoUrl) {
                 <img [src]="'http://localhost:3000/uploads/' + user?.photoUrl" alt="Foto de perfil"
@@ -15,7 +15,7 @@
                 <img src="/assets/img/usuario-defalult.png" alt="" width="32" height="32" class="img-thumbnail">
                 }
             </div>
-            <h4 class="mb-3 mt-4" style="color: #eb7abb">
+            <h4 class="mb-3 mt-4" style="color: #000000">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
                     class="bi bi-person-bounding-box" viewBox="0 0 16 16" style="margin-right: 10px;">
                     <path

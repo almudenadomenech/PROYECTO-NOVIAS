@@ -8,7 +8,7 @@
 
 .btn-outline1:hover {
     color: #000000;
-    background-color: #eb7abb;
+    background-color:  #c7c48f;
 }
 
 .btn-outline2 {
@@ -24,7 +24,7 @@
     color: red;
 }
 .card{
-    border: 1px solid #eb7abb; /* Cambia #ff0000 por el color que desees */
+    border: 1px solid  #c7c48f; /* Cambia #ff0000 por el color que desees */
   }
  
   

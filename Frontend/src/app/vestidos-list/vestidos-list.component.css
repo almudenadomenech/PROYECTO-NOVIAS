@@ -20,8 +20,8 @@ ngb-rating{
 }
 
 .btn-outline1:hover {
-  color: #ffffff;
-  background-color: #080808;
+  color: #000000;
+  background-color:  #c7c48f;
 }
 
 .btn-outline2 {
@@ -49,6 +49,7 @@ box-shadow: 0 0 20px rgba(230, 226, 226, 0.5), 0.9; /* Aumenta la sombra */
 }
 .card {
   height: 200%; /* Ajusta la altura de todas las tarjetas */
+  border: 1px solid#eee774; /* Cambia #ff0000 por el color que desees */
 }
 
 .card-img-container {
@@ -78,9 +79,6 @@ box-shadow: 0 0 20px rgba(230, 226, 226, 0.5), 0.9; /* Aumenta la sombra */
   color:  #000000;
 }
 
-.card{
-border: 1px solid #f0c7df; /* Cambia #ff0000 por el color que desees */
-}
 .confirmation-overlay {
 position: fixed;
 top: 0;

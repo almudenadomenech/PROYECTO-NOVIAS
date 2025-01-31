@@ -2,13 +2,13 @@
     color: #ffffff;
     background-color: rgb(60, 56, 56);
 }
-.btn-outline:hover {
+/* .btn-outline:hover {
     color: #030303;
     background-color: #eb7abb;
 }
 .rosa-border {
     border: 2px solid #eb7abb;
-  }
+  } */
 
   .btn1{
     font-size: 20px; /* Cambia el tamaño de la fuente */
@@ -21,7 +21,7 @@
     margin-left: 40px;
   }
 .btn1:hover{
-    background-color:  #eb7abb; /* Cambia el color de fondo al pasar el ratón por encima */
+    background-color:    #c7c48f; /* Cambia el color de fondo al pasar el ratón por encima */
     color:  #000000;
 }
 .imagen {
@@ -43,7 +43,7 @@
     object-fit: cover; /* Ajuste de la imagen */
     border-radius: 8px; /* Borde cuadrado con esquinas redondeadas */
     margin-left: 20px; /* Mueve la imagen 90px a la derecha */
-    border: 2px solid #eb7abb; /* Borde de color rosa */
+    border: 2px solid  #c7c48f; /* Borde de color  */
   }
   .custom-icon {
     font-size: 30px;

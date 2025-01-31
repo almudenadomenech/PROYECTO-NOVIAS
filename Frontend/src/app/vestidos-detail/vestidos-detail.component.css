@@ -23,8 +23,8 @@ h4{
    border-radius: 15px;
   }
   .reservar:hover{
-    background-color:  #000000; /* Cambia el color de fondo al pasar el ratón por encima */
-    color:  #ffffff;
+    background-color:   #c7c48f; /* Cambia el color de fondo al pasar el ratón por encima */
+    color:  #000000;
   }
   h3{
     color: black;

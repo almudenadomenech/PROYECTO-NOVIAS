@@ -16,7 +16,7 @@
 
 .btn-outline1:hover {
     color: #000000;
-    background-color:  #eb7abb;
+    background-color:    #c7c48f;
 }
 
 .btn-outline2 {
@@ -69,7 +69,7 @@ padding: 5px; /* Añade un espacio interno alrededor del contenido del botón */
 .close-button span {
 
 color: #ffffff;
-background-color: #eb7abb; /* Color de fondo del botón */
+background-color: #c7c48f; /* Color de fondo del botón */
 border: none; /* Elimina el borde del botón */
 padding: 5px 10px; /* Ajusta el padding para hacer el botón más cuadrado */
 border-radius: 8px; /* Ajusta el border-radius para hacer las esquinas redondeadas */
@@ -79,12 +79,12 @@ border-radius: 8px; /* Ajusta el border-radius para hacer las esquinas redondead
 font-size: 25px;
 }
 .silueta{
-  color: #eb7abb;
+  color:#c7c48f;
   font-size: 45px;
 }
 
 .rosa-border {
-  border: 2px solid #eb7abb;
+  border: 2px solid #c7c48f;
 }
 
 .text-center {

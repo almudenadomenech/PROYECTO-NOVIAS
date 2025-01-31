@@ -1,5 +1,5 @@
 .rosa-border {
-    border: 2px solid #eb7abb;
+    border: 2px solid#c7c48f;
   }
 
   .btn1, .btn2{
@@ -13,7 +13,7 @@
    
 }
 .btn1:hover{
-    background-color:  #eb7abb; /* Cambia el color de fondo al pasar el ratón por encima */
+    background-color:    #c7c48f; /* Cambia el color de fondo al pasar el ratón por encima */
     color:  #000000;
 }
 
@@ -58,7 +58,7 @@
 .close-button span {
  
   color: #ffffff;
-  background-color: #eb7abb; /* Color de fondo del botón */
+  background-color:  #c7c48f; /* Color de fondo del botón */
   border: none; /* Elimina el borde del botón */
   padding: 5px 10px; /* Ajusta el padding para hacer el botón más cuadrado */
   border-radius: 8px; /* Ajusta el border-radius para hacer las esquinas redondeadas */
