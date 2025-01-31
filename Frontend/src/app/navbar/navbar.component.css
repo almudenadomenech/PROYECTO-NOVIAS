@@ -42,7 +42,7 @@ h3{
     border-radius: 50%; /* Hace que la imagen sea circular */
     float: right; /* Alinea la imagen a la derecha */
     margin-left: 15px; /* Espacio entre la imagen y el contenido */
-    border: 2px solid #eb7abb; /* Agrega un borde de color rosa */
+    border: 2px solid #c7c48f; /* Agrega un borde de color rosa */
   }
   
   .text-center {

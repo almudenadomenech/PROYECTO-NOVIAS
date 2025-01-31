@@ -49,7 +49,7 @@ box-shadow: 0 0 20px rgba(230, 226, 226, 0.5), 0.9; /* Aumenta la sombra */
 }
 .card {
   height: 200%; /* Ajusta la altura de todas las tarjetas */
-  border: 1px solid#eee774; /* Cambia #ff0000 por el color que desees */
+  border: 1px solid#c7c48f; /* Cambia #ff0000 por el color que desees */
 }
 
 .card-img-container {
@@ -93,10 +93,10 @@ z-index: 1050; /* Asegura que el mensaje esté por encima de otros elementos */
 }
 
 .confirmation-message {
-background-color:#e1d5ee;
+background-color:#e6e4d0;
 padding: 20px;
 border-radius: 8px;
-box-shadow: 0 4px 8px #f2e6ff;
+box-shadow: 0 4px 8px #e6e4d0;
 text-align: center;
 color: #000000;
 border: 1px solid #000000;
