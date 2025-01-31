@@ -15,6 +15,7 @@ h4{
     border-radius: 5px; /* Redondea las esquinas */
     text-decoration: none; /* Elimina la subrayado */
     display: inline-block; /* Asegura que se comporta como un bloque en línea */
+    margin-top: 25px;
    
 }
 .btn1:hover{
