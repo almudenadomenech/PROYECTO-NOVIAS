@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, NgbDropdownModule],
+  imports: [RouterLink, RouterLink, NgbDropdownModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })

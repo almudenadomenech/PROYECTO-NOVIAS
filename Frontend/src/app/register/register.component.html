@@ -9,7 +9,7 @@
     
   
       <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="email" placeholder="name@example.com" formControlName="email">
+        <input type="email" class="form-control" id="email" placeholder="name@example.com" formControlName="email" style="background-color: rgb(196, 204, 201);">
         <label for="email">Email</label>
         @if(registerForm.controls.email.touched && registerForm.controls.email.errors) {
           <div>
@@ -25,12 +25,12 @@
       </div>
   
       <div class="form-floating mb-3">
-        <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password">
+        <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password" style="background-color: rgb(196, 204, 201);">
         <label for="password">Contraseña</label>
       </div>
   
       <div class="form-floating mb-3">
-        <input type="password" class="form-control" id="passwordConfirm" placeholder="Password" formControlName="passwordConfirm">
+        <input type="password" class="form-control" id="passwordConfirm" placeholder="Password" formControlName="passwordConfirm" style="background-color: rgb(196, 204, 201);">
         <label for="passwordConfirm">Confirmación contraseña</label>
         @if(registerForm.controls.passwordConfirm.touched && registerForm.getError('confirmError')) {
           <div>
